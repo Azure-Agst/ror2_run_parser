@@ -26,16 +26,18 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install flake8 pytest
-        if exist requirements.txt python -m pip install -r requirements.txt
+        if (Test-Path -Path requirements.txt) {
+          python -m pip install -r requirements.txt
+        }
     - name: Lint with flake8
       run: |
         :: stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         :: exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Set up faux registry for tests
+    - name: Set up faux registry entry for tests
       run: |
-        reg add HKLM\SOFTWARE\WOW6432Node\Valve\Steam /v InstallPath /t REG_SZ %cd%
+        New-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam" -Name InstallPathFaux -Value ((Get-Item .).FullName)
     - name: Test with unittest
       run: |
         python -m unittest -v tests
