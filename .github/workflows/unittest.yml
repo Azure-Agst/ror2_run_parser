@@ -37,7 +37,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Set up faux registry entry for tests
       run: |
-        New-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam" -Name InstallPathFaux -Value ((Get-Item .).FullName)
+        New-Item -Path "HKLM:\SOFTWARE\WOW6432Node\Valve"
+        New-Item -Path "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam"
+        New-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam" -Name InstallPath -Value ((Get-Item .).FullName)
     - name: Test with unittest
       run: |
         python -m unittest -v tests
