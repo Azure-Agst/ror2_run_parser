@@ -37,7 +37,7 @@ class RunParser():
     parsedProfiles : { str : str } = {}
 
 
-    def __init__(self, steam_dir: str = None):
+    def __init__(self, steam_dir: str = None, replay_dir: str = None, profile_dir: str = None):
 
         # try to locate steam installation
         # is path is provided, use it. otherwise, try to find it ourselves.
@@ -52,11 +52,11 @@ class RunParser():
         logger.info("Steam install located at path \"{}\"!".format(self.steamDir))
 
         # try to locate replay folder
-        found_replays = self.find_replays()
+        found_replays = self.find_replays(replay_dir)
         logger.info("Found {} replays!".format(found_replays))
 
         # try to find profiles
-        found_profiles = self.find_profiles()
+        found_profiles = self.find_profiles(profile_dir)
         logger.info("Found {} profiles!".format(found_profiles))
 
 
@@ -79,27 +79,30 @@ class RunParser():
             return install_path
         
         except BaseException as e:
-                raise Exception("Unable to find Steam Installation!\nPlease pass steam_dir variable to RunParser().")
+            raise Exception("Unable to find Steam Installation!\nPlease pass steam_dir variable to RunParser().")
 
 
-    def find_replays(self):
-        try:
-            # set game and replay directories
-            self.gameDir = os.path.join(self.steamDir + '\\steamapps\\common\\Risk of Rain 2')
+    def find_replays(self, replay_dir: str = None):
+        # set game and replay directories
+        self.gameDir = os.path.join(self.steamDir + '\\steamapps\\common\\Risk of Rain 2')
+        if replay_dir is None:
             self.replayDir = os.path.join(self.gameDir + '\\Risk of Rain 2_Data\\RunReports\\History')
+        else:
+            self.replayDir = replay_dir
 
+        try:
             # attempt to access saves in that location
             self.runList = sorted(Path(self.replayDir).iterdir(), key=os.path.getmtime)
 
             # return number of runs found
             return len(self.runList)
         
-        except BaseException as e:
-            raise Exception("Unable to find replay folder?")
+        except BaseException:
+            raise Exception("Unable to find replay folder!")
+            
 
-
-    def find_profiles(self):
-        try:
+    def find_profiles(self, profile_dir: str = None):
+        if profile_dir is None:
             # find steam userdata directory
             userdata = os.path.join(self.steamDir + '\\userdata')
 
@@ -112,14 +115,16 @@ class RunParser():
                 try:
                     profile_path = os.path.join(userdata, user, "632360\\remote\\UserProfiles")
                     self.profileList += sorted(Path(profile_path).iterdir(), key=os.path.getmtime)
-                except BaseException as e:
+                except BaseException:
                     continue
-
-            # return number of profiles found
-            return len(self.profileList)
-
-        except BaseException as e:
-            raise Exception("Unable to find RoR2 profile folder?")
+        else:
+            try:
+                self.profileList = sorted(Path(profile_dir).iterdir(), key=os.path.getmtime)
+            except BaseException:
+                raise Exception("Invalid profile folder provided!")
+        
+        # return number of profiles found
+        return len(self.profileList)
 
 
     def parse_runs(self, count : int = 10):

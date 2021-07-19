@@ -15,7 +15,9 @@ class test_RunParser(unittest.TestCase):
 
     def setUp(self):
         """Set up the test cases."""
-        self.rp = RunParser()
+        replay_path = os.path.join(os.path.dirname(__file__), "files/runs")
+        profile_path = os.path.join(os.path.dirname(__file__), "files/profiles")
+        self.rp = RunParser(replay_dir=replay_path, profile_dir=profile_path)
 
 
     def tearDown(self):
@@ -26,7 +28,6 @@ class test_RunParser(unittest.TestCase):
     def test_RunParser_Parse10Runs(self):
         """
         Test parsing of the runs.
-        Note that this uses saves on the local machine as test data
         """
         self.rp.parse_runs()
        

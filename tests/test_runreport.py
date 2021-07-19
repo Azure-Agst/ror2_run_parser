@@ -18,7 +18,7 @@ class test_RunReport(unittest.TestCase):
 
     def setUp(self):
         """Set up the test cases."""
-        file_name = os.path.join(os.path.dirname(__file__), "files/run1.xml")
+        file_name = os.path.join(os.path.dirname(__file__), "files/runs/run1.xml")
         with open(file_name, "r") as f:
             self.file_root = BeautifulSoup(f, "html.parser")
 
