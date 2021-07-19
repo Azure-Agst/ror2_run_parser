@@ -2,6 +2,9 @@
 
 from platform import uname
 
+import sys
+import logging
+
 # make sure we're running on windows
 if 'Windows' not in uname().system:
     ex_string = "This script is only for Windows!"
@@ -10,13 +13,15 @@ if 'Windows' not in uname().system:
     raise Exception(ex_string)
 
 # set up logging
-import logging
-logging.basicConfig(
-    filename='runparser.log', 
-    encoding='utf-8', 
-    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
-    level=logging.DEBUG
-)
+filename = 'runparser.log'
+encoding = 'utf-8'
+output_fmt = '%(asctime)s: %(levelname)s: %(message)s'
+level = logging.WARNING
+if sys.version_info > (3, 9):
+    # if py3.9 or later, add encodings to the logger
+    logging.basicConfig(filename=filename, encoding='utf-8', format=output_fmt, level=level)
+else:
+    logging.basicConfig(filename=filename, format=output_fmt, level=level)
 
 # import modules
 from .runparser import RunParser
