@@ -19,8 +19,8 @@ import configparser
 import winreg
 import logging
 
-from .runreport import RunReport
-from .player import Player
+from .models.runreport import RunReport
+from .models.player import Player
 
 logger = logging.getLogger(__name__)
 

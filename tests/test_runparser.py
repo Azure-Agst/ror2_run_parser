@@ -24,7 +24,10 @@ class test_RunParser(unittest.TestCase):
 
 
     def test_RunParser_Parse10Runs(self):
-        """Test parsing of the runs."""
+        """
+        Test parsing of the runs.
+        Note that this uses saves on the local machine as test data
+        """
         self.rp.parse_runs()
        
 

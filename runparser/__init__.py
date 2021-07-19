@@ -20,5 +20,6 @@ logging.basicConfig(
 
 # import modules
 from .runparser import RunParser
-from .runreport import RunReport
-from .player import Player
+from .models.runreport import RunReport
+from .models.player import Player
+from .models.profile import Profile
