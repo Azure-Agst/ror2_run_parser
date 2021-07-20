@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-runparser.runparser
+runparser.RunParser
 ~~~~~~~~~~~~
 
 main class lol
@@ -14,127 +14,100 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 
 import os
-import sys
-import configparser
-import winreg
 import logging
 
 from .models.runreport import RunReport
-from .models.player import Player
+from .models.profile import Profile
 
 logger = logging.getLogger(__name__)
 
+
 class RunParser():
 
-    steamDir : str = "C:\\Program Files (x86)\\Steam"
-    gameDir : str = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Risk of Rain 2"
-    replayDir : str = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Risk of Rain 2\\Risk of Rain 2_Data\\RunReports\\History"
-    profileDir : str = "C:\\Program Files (x86)\\Steam\\userdata\\999999999\\632360\\remote\\UserProfiles"
-    winReg = None
-    runList : [ str ] = []
-    profileList : [ str ] = []
-    parsedRuns : { str : RunReport } = {}
-    parsedProfiles : { str : str } = {}
+    def __init__(self, replay_dir: str = None, profile_dir: str = None):
+        # reset
+        self.clear()
 
+        # handle paths if passed in
+        if replay_dir is not None:
+            self.set_replay_dir(replay_dir)
+        if profile_dir is not None:
+            self.set_profile_dir(profile_dir)
 
-    def __init__(self, steam_dir: str = None, replay_dir: str = None, profile_dir: str = None):
+    def clear(self):
+        self._replayDir: str = None
+        self._profileDir: str = None
+        self._runList: [str] = []
+        self._profileList: [str] = []
+        self.runs: [RunReport] = []
+        self.profiles: [Profile] = []
 
-        # try to locate steam installation
-        # is path is provided, use it. otherwise, try to find it ourselves.
-        if steam_dir != None:
-            logger.info("Steam install specified, validating...")
-            self.steamDir = steam_dir
-            if not os.path.isdir(self.steamDir) or os.path.exists(os.path.join(self.steamDir, 'steam.exe')):
-                raise Exception("Unable to find Steam Installation!\nEnsure steam_dir variable passed to RunParser() is correct.")
-        else:
-            logger.warning("Steam install path not specified, attempting to find...")
-            self.steamDir = self.find_steam()
-        logger.info("Steam install located at path \"{}\"!".format(self.steamDir))
+    def get_replay_dir(self):
+        """Gets the replay directory"""
+        return self._replayDir
 
-        # try to locate replay folder
-        found_replays = self.find_replays(replay_dir)
-        logger.info("Found {} replays!".format(found_replays))
+    def get_profile_dir(self):
+        """Gets the replay directory"""
+        return self._profileDir
 
-        # try to find profiles
-        found_profiles = self.find_profiles(profile_dir)
-        logger.info("Found {} profiles!".format(found_profiles))
+    def set_replay_dir(self, replay_dir: str):
+        """Sets the replay directory"""
 
+        # if path is not valid, error. else, set it
+        if not os.path.isdir(replay_dir):
+            raise Exception("Invalid replay directory! {} does not exist!".format(replay_dir))
+        self._replayDir = replay_dir
 
-    def __del__(self):
-        if self.winReg is not None:
-            self.winReg.Close()
+        # go ahead and log, then find replays in folder
+        logger.info("Set replay path to: {}".format(self._replayDir))
+        self._runList = self.find_replays()
 
-    
-    def find_steam(self):
-        try:
-            # get connection to registry
-            self.winReg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+    def set_profile_dir(self, profile_dir: str):
+        """Sets the profile directory"""
 
-            # find steam install path
-            key = winreg.OpenKey(self.winReg, r'SOFTWARE\WOW6432Node\Valve\Steam')
-            install_path = winreg.QueryValueEx(key, 'InstallPath')[0]
-            key.Close()
+        # if path is not valid, error. else, set it
+        if not os.path.isdir(profile_dir):
+            raise Exception("Invalid profile directory! {} does not exist!".format(profile_dir))
+        self._profileDir = profile_dir
 
-            # return path to steam
-            return install_path
-        
-        except BaseException as e:
-            raise Exception("Unable to find Steam Installation!\nPlease pass steam_dir variable to RunParser().")
+        # go ahead and log, then find replays in folder
+        logger.info("Set profile path to: {}".format(self._profileDir))
+        self._profileList = self.find_profiles()
 
+    def find_replays(self):
+        """Finds all replays in _replayDir"""
 
-    def find_replays(self, replay_dir: str = None):
-        # set game and replay directories
-        self.gameDir = os.path.join(self.steamDir + '\\steamapps\\common\\Risk of Rain 2')
-        if replay_dir is None:
-            self.replayDir = os.path.join(self.gameDir + '\\Risk of Rain 2_Data\\RunReports\\History')
-        else:
-            self.replayDir = replay_dir
+        # use pathlib to return a list of absolute paths
+        r = sorted(Path(self._replayDir).iterdir(), key=os.path.getmtime)
+        logger.info("Found {} replays at path {}".format(len(r), self._replayDir))
+        return r
 
-        try:
-            # attempt to access saves in that location
-            self.runList = sorted(Path(self.replayDir).iterdir(), key=os.path.getmtime)
+    def find_profiles(self):
+        """Finds all profiles in _profileDir"""
 
-            # return number of runs found
-            return len(self.runList)
-        
-        except BaseException:
-            raise Exception("Unable to find replay folder!")
-            
+        # use pathlib to return a list of absolute paths
+        p = sorted(Path(self._profileDir).iterdir(), key=os.path.getmtime)
+        logger.info("Found {} profiles at path {}".format(len(p), self._profileDir))
+        return p
 
-    def find_profiles(self, profile_dir: str = None):
-        if profile_dir is None:
-            # find steam userdata directory
-            userdata = os.path.join(self.steamDir + '\\userdata')
+    def parse_runs(self):
+        """Attempts to parse all runs in _runList"""
 
-            # list all user folders in there
-            all_users = os.listdir(userdata)
-
-            # iterate through each user, and see if profile folder exists.
-            # if user has a profile folder, add contents to the list.
-            for user in all_users:
-                try:
-                    profile_path = os.path.join(userdata, user, "632360\\remote\\UserProfiles")
-                    self.profileList += sorted(Path(profile_path).iterdir(), key=os.path.getmtime)
-                except BaseException:
-                    continue
-        else:
-            try:
-                self.profileList = sorted(Path(profile_dir).iterdir(), key=os.path.getmtime)
-            except BaseException:
-                raise Exception("Invalid profile folder provided!")
-        
-        # return number of profiles found
-        return len(self.profileList)
-
-
-    def parse_runs(self, count : int = 10):
-        """parses latest numbers of runs. default = 10"""
-
-        if self.parsedRuns != None:
-            self.parsedRuns.clear()
-
-        for item in self.runList[-count:]:
-            with open(item, 'r') as f:
+        # iterate over each file, open it,
+        # get root tag from bs4, then parse it
+        for run_file in self._runList:
+            with open(run_file, 'r') as f:
                 soup = BeautifulSoup(f, 'html.parser')
             run = RunReport(soup)
-            self.parsedRuns[run.guid] = run
+            self.runs.append(run)
+
+    def parse_profiles(self):
+        """Attempts to parse all runs in _profileList"""
+
+        # iterate over each file, open it,
+        # get root tag from bs4, then parse it
+        for profile_file in self._profileList:
+            with open(profile_file, 'r') as f:
+                soup = BeautifulSoup(f, 'html.parser')
+            profile = Profile(soup)
+            self.runs.append(profile)
