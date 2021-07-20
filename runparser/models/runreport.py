@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-runparser.runreport
+runparser.RunReport
 ~~~~~~~~~~~~
 
 This module implements the class that to parses each run.
@@ -10,14 +10,14 @@ This module implements the class that to parses each run.
 :license: Apache2, see LICENSE for more details.
 """
 
-from bs4 import BeautifulSoup, Tag
-from pathlib import Path
+from bs4 import Tag
 
 import logging
 
 from .player import Player
 
 logger = logging.getLogger(__name__)
+
 
 class RunReport():
     """This class parses the run report."""
@@ -29,23 +29,23 @@ class RunReport():
             self.parse(self._fileRoot)
 
     def reset(self):
-        self.version : int = 0
-        self.guid : str = None
-        self.gamemode : str = None
-        self.ending : str = None
-        self.seed : int = 0
-        self.start_timestamp : int = 0
-        self.end_timestamp : int = 0
-        self.total_time : float = 0.0
-        self.run_time : float = 0.0
-        self.artifacts : list = []
-        self.enabled_items : list = []
-        self.disabled_items : list = []
-        self.enabled_equipment : list = []
-        self.disabled_equipment : list = []
-        self.players : list = []
-        self.misc : dict = {}
-    
+        self.version: int = 0
+        self.guid: str = None
+        self.gamemode: str = None
+        self.ending: str = None
+        self.seed: int = 0
+        self.start_timestamp: int = 0
+        self.end_timestamp: int = 0
+        self.total_time: float = 0.0
+        self.run_time: float = 0.0
+        self.artifacts: list = []
+        self.enabled_items: list = []
+        self.disabled_items: list = []
+        self.enabled_equipment: list = []
+        self.disabled_equipment: list = []
+        self.players: list = []
+        self.misc: dict = {}
+
     def parse(self, rootTag: Tag):
         """Parses the run report."""
 
@@ -84,7 +84,7 @@ class RunReport():
                     self.disabled_equipment.append(rule_arr[1])
             if rule_arr[0] == "Misc":
                 self.misc[rule_arr[1]] = rule_arr[2]
-        
+
         # loop over each player
         self.players = []
         player_list = runreport.find('playerinfos').find_all('playerinfo')
@@ -92,6 +92,3 @@ class RunReport():
             self.players.append(Player(player_data))
 
         logger.debug("Finished parsing run report: {}".format(self.guid))
-
-
-            
