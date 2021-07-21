@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-runparser.RunReport
+runparser.models.RunReport
 ~~~~~~~~~~~~
 
 This module implements the class that to parses each run.

@@ -2,7 +2,7 @@
 # flake8: noqa: E501,C901
 
 """
-runparser.Player
+runparser.models.Player
 ~~~~~~~~~~~~
 
 This module implements the class that represents each player.

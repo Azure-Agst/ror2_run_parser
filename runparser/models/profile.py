@@ -2,7 +2,7 @@
 # flake8: noqa: E501,C901
 
 """
-runparser.Profile
+runparser.models.Profile
 ~~~~~~~~~~~~
 
 This module implements the class that represents each profile.
