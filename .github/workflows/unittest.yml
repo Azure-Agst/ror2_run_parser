@@ -5,7 +5,15 @@
 name: Unit Tests
 
 # trigger events
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+    - main
+    - develop
+  pull_request:
+    branches:
+    - main
+    - develop
 
 # job definitions
 jobs:
