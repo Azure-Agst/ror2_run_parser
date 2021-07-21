@@ -28,6 +28,9 @@ class RunParserDB():
         self.path = os.path.join(os.path.dirname(__file__), "db.json")
         self.db = TinyDB(self.path, sort_keys=True, indent=4, separators=(',', ': '))
 
+    def __del__(self):
+        self.db.close()
+
     def get_item(self, internal_name: str = None, name: str = None):
         table = self.db.table('items')
         Item = Query()
