@@ -15,6 +15,9 @@ from bs4 import Tag
 import logging
 
 from .player import Player
+from .item import Item
+from .equipment import Equipment
+from .artifact import Artifact
 
 logger = logging.getLogger(__name__)
 
@@ -38,12 +41,12 @@ class RunReport():
         self.end_timestamp: int = 0
         self.total_time: float = 0.0
         self.run_time: float = 0.0
-        self.artifacts: list = []
-        self.enabled_items: list = []
-        self.disabled_items: list = []
-        self.enabled_equipment: list = []
-        self.disabled_equipment: list = []
-        self.players: list = []
+        self.artifacts: [Artifact] = []
+        self.enabled_items: [Item] = []
+        self.disabled_items: [Item] = []
+        self.enabled_equipment: [Equipment] = []
+        self.disabled_equipment: [Equipment] = []
+        self.players: [Player] = []
         self.misc: dict = {}
 
     def parse(self, rootTag: Tag):
@@ -71,22 +74,21 @@ class RunReport():
             if rule_arr[0] == "Difficulty":
                 self.difficulty = rule_arr[1]
             if rule_arr[0] == "Artifacts" and rule_arr[2] == "On":
-                self.artifacts.append(rule_arr[1])
+                self.artifacts.append(Artifact(rule_arr[1]))
             if rule_arr[0] == "Items":
                 if rule_arr[2] == "On":
-                    self.enabled_items.append(rule_arr[1])
+                    self.enabled_items.append(Item(rule_arr[1]))
                 else:
-                    self.disabled_items.append(rule_arr[1])
+                    self.disabled_items.append(Item(rule_arr[1]))
             if rule_arr[0] == "Equipment":
                 if rule_arr[2] == "On":
-                    self.enabled_equipment.append(rule_arr[1])
+                    self.enabled_equipment.append(Equipment(rule_arr[1]))
                 else:
-                    self.disabled_equipment.append(rule_arr[1])
+                    self.disabled_equipment.append(Equipment(rule_arr[1]))
             if rule_arr[0] == "Misc":
                 self.misc[rule_arr[1]] = rule_arr[2]
 
         # loop over each player
-        self.players = []
         player_list = runreport.find('playerinfos').find_all('playerinfo')
         for player_data in player_list:
             self.players.append(Player(player_data))

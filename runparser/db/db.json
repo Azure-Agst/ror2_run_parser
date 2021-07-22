@@ -2,83 +2,99 @@
     "artifacts": {
         "1": {
             "desc": "Friendly fire is enabled for both survivors and monsters alike.",
-            "internal_name": "friendlyfire",
-            "name": "Artifact of Chaos"
+            "internal_name": "FriendlyFire",
+            "name": "Artifact of Chaos",
+            "short_name": "Chaos"
         },
         "10": {
             "desc": "Monsters will be of only one type per stage.",
-            "internal_name": "singlemonstertype",
-            "name": "Artifact of Kin"
+            "internal_name": "SingleMonsterType",
+            "name": "Artifact of Kin",
+            "short_name": "Kin"
         },
         "11": {
             "desc": "Players always spawn as a random survivor.",
-            "internal_name": "randomsurvivoronrespawn",
-            "name": "Artifact of Metamorphosis"
+            "internal_name": "RandomSurvivorOnRespawn",
+            "name": "Artifact of Metamorphosis",
+            "short_name": "Metamorphosis"
         },
         "12": {
             "desc": "Monsters drop items on death, but Chests no longer spawn.",
-            "internal_name": "sacrifice",
-            "name": "Artifact of Sacrifice"
+            "internal_name": "Sacrifice",
+            "name": "Artifact of Sacrifice",
+            "short_name": "Sacrifice"
         },
         "13": {
             "desc": "Wisps emerge from defeated monsters.",
-            "internal_name": "wispondeath",
-            "name": "Artifact of Soul"
+            "internal_name": "WispOnDeath",
+            "name": "Artifact of Soul",
+            "short_name": "Soul"
         },
         "14": {
             "desc": "Enemies drop multiple exploding bombs on death.",
-            "internal_name": "bomb",
-            "name": "Artifact of Spite"
+            "internal_name": "Bomb",
+            "name": "Artifact of Spite",
+            "short_name": "Spite"
         },
         "15": {
             "desc": "Monster spawns are doubled, but monster maximum health is halved.",
-            "internal_name": "swarms",
-            "name": "Artifact of Swarms"
+            "internal_name": "Swarms",
+            "name": "Artifact of Swarms",
+            "short_name": "Swarms"
         },
         "16": {
             "desc": "Your relentless doppelganger will invade every 10 minutes.",
-            "internal_name": "shadowclone",
-            "name": "Artifact of Vengeance"
+            "internal_name": "ShadowClone",
+            "name": "Artifact of Vengeance",
+            "short_name": "Vengeance"
         },
         "2": {
             "desc": "Choose your items.",
-            "internal_name": "command",
-            "name": "Artifact of Command"
+            "internal_name": "Command",
+            "name": "Artifact of Command",
+            "short_name": "Command"
         },
         "3": {
             "desc": "When one player dies, everyone dies. Enable only if you want to truly put your teamwork and individual skill to the ultimate test.",
-            "internal_name": "teamdeath",
-            "name": "Artifact of Death"
+            "internal_name": "TeamDeath",
+            "name": "Artifact of Death",
+            "short_name": "Death"
         },
         "4": {
             "desc": "Monsters can appear outside their usual environments.",
-            "internal_name": "mixenemy",
-            "name": "Artifact of Dissonance"
+            "internal_name": "MixEnemy",
+            "name": "Artifact of Dissonance",
+            "short_name": "Dissonance"
         },
         "5": {
             "desc": "Spawn with a random equipment that changes every time it's activated.",
-            "internal_name": "enigma",
-            "name": "Artifact of Enigma"
+            "internal_name": "Enigma",
+            "name": "Artifact of Enigma",
+            "short_name": "Enigma"
         },
         "6": {
             "desc": "Monsters gain items between stages.",
-            "internal_name": "monsterteamgainsitems",
-            "name": "Artifact of Evolution"
+            "internal_name": "MonsterTeamGainsItems",
+            "name": "Artifact of Evolution",
+            "short_name": "Evolution"
         },
         "7": {
             "desc": "Fall damage is doubled and lethal.",
-            "internal_name": "weakassknees",
-            "name": "Artifact of Frailty"
+            "internal_name": "WeakAssKnees",
+            "name": "Artifact of Frailty",
+            "short_name": "Frailty"
         },
         "8": {
             "desc": "Allies deal 500% damage, but have 10% health.",
-            "internal_name": "glass",
-            "name": "Artifact of Glass"
+            "internal_name": "Glass",
+            "name": "Artifact of Glass",
+            "short_name": "Glass"
         },
         "9": {
             "desc": "Enemies can only spawn as elites.",
-            "internal_name": "eliteonly",
-            "name": "Artifact of Honor"
+            "internal_name": "EliteOnly",
+            "name": "Artifact of Honor",
+            "short_name": "Honor"
         }
     },
     "equipment": {
@@ -87,7 +103,7 @@
             "desc": "Fire a swarm of 12 missiles that deal 12x300% damage.",
             "duration": 1.5,
             "id": 0,
-            "internal_name": "commandmissile",
+            "internal_name": "CommandMissile",
             "name": "Disposable Missile Launcher",
             "quote": "Fire a swarm of missiles.",
             "rarity": 1
@@ -95,7 +111,7 @@
         "10": {
             "desc": "Fires a continuous barrage that deals 100% damage per bullet. Costs $1 per bullet. Cost increases over time.",
             "id": 0,
-            "internal_name": "goldgat",
+            "internal_name": "GoldGat",
             "name": "The Crowdfunder",
             "quote": "Toggle to fire. Costs gold per bullet.",
             "rarity": 1,
@@ -105,7 +121,7 @@
             "cooldown": 15,
             "desc": "Gain a Woodsprite follower that heals for 1.5% of your maximum health/second. Can be sent to an ally to heal them for 10% of their maximum health.",
             "id": 0,
-            "internal_name": "passivehealing",
+            "internal_name": "PassiveHealing",
             "name": "Gnarled Woodsprite",
             "quote": "Heal over time. Activate to send to an ally.",
             "rarity": 1,
@@ -115,7 +131,7 @@
             "desc": "Become an aspect of fire.",
             "elite": "Blazing",
             "id": 0,
-            "internal_name": "affixred",
+            "internal_name": "AffixRed",
             "name": "Ifrit's Distinction",
             "quote": "Become an aspect of fire.",
             "rarity": 3
@@ -124,7 +140,7 @@
             "desc": "Become an aspect of lightning.",
             "elite": "Overloading",
             "id": 6,
-            "internal_name": "affixblue",
+            "internal_name": "AffixBlue",
             "name": "Silence Between Two Strikes",
             "quote": "Become an aspect of lightning.",
             "rarity": 3
@@ -133,7 +149,7 @@
             "desc": "Become an aspect of ice.",
             "elite": "Glacial",
             "id": 0,
-            "internal_name": "affixwhite",
+            "internal_name": "AffixWhite",
             "name": "Her Biting Embrace",
             "quote": "Become an aspect of ice.",
             "rarity": 3
@@ -142,7 +158,7 @@
             "desc": "Become an aspect of corruption.",
             "elite": "Malachite",
             "id": 0,
-            "internal_name": "affixpoison",
+            "internal_name": "AffixPoison",
             "name": "N'kuhana's Retort",
             "quote": "Become an aspect of corruption.",
             "rarity": 3
@@ -151,7 +167,7 @@
             "desc": "Become an aspect of incorporeality.",
             "elite": "Celestine",
             "id": 0,
-            "internal_name": "affixhaunted",
+            "internal_name": "AffixHaunted",
             "name": "Spectral Circlet",
             "quote": "Become an aspect of incorporeality.",
             "rarity": 3
@@ -160,7 +176,7 @@
             "desc": "Become an aspect of perfection.",
             "elite": "Perfected",
             "id": 0,
-            "internal_name": "affixyellow",
+            "internal_name": "AffixYellow",
             "name": "Shared Design",
             "quote": "Become an aspect of perfection.",
             "rarity": 3
@@ -170,7 +186,7 @@
             "desc": "Ignite ALL characters within 15m for 12s. Deal 5% of your maximum health/second as burning to yourself. The burn is 0.5x stronger on allies, and 24x stronger on enemies.",
             "duration": 12,
             "id": 0,
-            "internal_name": "burnnearby",
+            "internal_name": "BurnNearby",
             "name": "Helfire Tincture",
             "quote": "Burn everything nearby... including you and allies.",
             "rarity": 2,
@@ -181,7 +197,7 @@
             "desc": "Reveal all interactables within 500m for 10 seconds.",
             "duration": 10,
             "id": 0,
-            "internal_name": "scanner",
+            "internal_name": "Scanner",
             "name": "Radar Scanner",
             "quote": "Reveal all nearby interactables.",
             "rarity": 1,
@@ -191,7 +207,7 @@
             "cooldown": 45,
             "desc": "Instantly heal for 50% of your maximum health.",
             "id": 2,
-            "internal_name": "fruit",
+            "internal_name": "Fruit",
             "name": "Foreign Fruit",
             "quote": "Heal on use.",
             "rarity": 1
@@ -200,7 +216,7 @@
             "cooldown": 15,
             "desc": "ALL characters within are slowed by 50% and have their armor reduced by 20. Can place up to 5.",
             "id": 0,
-            "internal_name": "crippleward",
+            "internal_name": "CrippleWard",
             "name": "Effigy of Grief",
             "quote": "Drop a permanent effigy that cripples ALL characters inside. Can place up to 5.",
             "rarity": 2
@@ -209,7 +225,7 @@
             "cooldown": 45,
             "desc": "Create a quantum tunnel of up to 1000m in length. Lasts 30 seconds.",
             "id": 0,
-            "internal_name": "gateway",
+            "internal_name": "Gateway",
             "name": "Eccentric Vase",
             "quote": "Create a quantum tunnel between two locations.",
             "rarity": 1,
@@ -220,7 +236,7 @@
             "desc": "Drink the Tonic, gaining a boost for 20 seconds. Increases damage by +100%. Increases attack speed by +70%. Increases armor by +20. Increases maximum health by +50%. Increases passive health regeneration by +300%. Increases movespeed by +30%.\\nWhen the Tonic wears off, you have a 20% chance to gain a Tonic Affliction, reducing all of your stats by -5% (-5% per stack).",
             "duration": 20,
             "id": 0,
-            "internal_name": "tonic",
+            "internal_name": "Tonic",
             "name": "Spinel Tonic",
             "quote": "Gain a massive boost to ALL stats. Chance to gain an affliction that reduces ALL stats.",
             "rarity": 2,
@@ -229,7 +245,7 @@
         "23": {
             "desc": "Looks like it could power something. EXTREMELY unstable...",
             "id": 0,
-            "internal_name": "questvolatilebattery",
+            "internal_name": "QuestVolatileBattery",
             "name": "Fuel Array",
             "quote": "Looks like it could power something. EXTREMELY unstable...",
             "rarity": 1
@@ -238,7 +254,7 @@
             "cooldown": 20,
             "desc": "Cleanse all negative effects. Includes debuffs, damage over time, and nearby projectiles.",
             "id": 0,
-            "internal_name": "cleanse",
+            "internal_name": "Cleanse",
             "name": "Blast Shower",
             "quote": "Cleanse all negative effects.",
             "rarity": 1,
@@ -249,7 +265,7 @@
             "desc": "Turn into a draconic fireball for 5 seconds. Deal 500% damage on impact. Detonates at the end for 800% damage.",
             "duration": 5,
             "id": 0,
-            "internal_name": "fireballdash",
+            "internal_name": "FireBallDash",
             "name": "Volcanic Egg",
             "quote": "Transform into a speeding draconic fireball, dealing damage as you pass through enemies.",
             "rarity": 1
@@ -259,7 +275,7 @@
             "desc": "Gain 500 armor for 5 seconds.",
             "duration": 5,
             "id": 0,
-            "internal_name": "gainarmor",
+            "internal_name": "GainArmor",
             "name": "Jade Elephant",
             "quote": "Gain massive armor for 5 seconds.",
             "rarity": 1
@@ -268,7 +284,7 @@
             "cooldown": 45,
             "desc": "Throw three large saw blades that slice through enemies for 3x400% damage. Also deals an additional 3x100% damage per second while bleeding enemies. Can strike enemies again on the way back.",
             "id": 0,
-            "internal_name": "saw",
+            "internal_name": "Saw",
             "name": "Sawmerang",
             "quote": "Throw a fan of buzzing saws that come back to you.",
             "rarity": 1
@@ -277,7 +293,7 @@
             "cooldown": 45,
             "desc": "Transform an Item or Equipment into a different one. Can only be converted into the same tier one time.",
             "id": 0,
-            "internal_name": "recycle",
+            "internal_name": "Recycle",
             "name": "Recycler",
             "quote": "Transform an Item or Equipment into a different one. Can only recycle once.",
             "rarity": 1,
@@ -288,7 +304,7 @@
             "desc": "Heal for 20% of the damage you deal. Lasts 8 seconds.",
             "duration": 8,
             "id": 0,
-            "internal_name": "lifestealonhit",
+            "internal_name": "LifestealOnHit",
             "name": "Super Massive Leech",
             "quote": "Heal for a percentage of the damage you deal for 8 seconds.",
             "rarity": 1
@@ -298,7 +314,7 @@
             "desc": "Rain meteors from the sky, damaging ALL characters for 600% damage per blast. Lasts 20 seconds.",
             "duration": 20,
             "id": 0,
-            "internal_name": "meteor",
+            "internal_name": "Meteor",
             "name": "Glowing Meteorite",
             "quote": "Rain meteors from the sky, hurting both enemies and allies.",
             "rarity": 2,
@@ -309,7 +325,7 @@
             "desc": "All allies enter a frenzy for 7 seconds. Increases movement speed by 50% and attack speed by 100%.",
             "duration": 7,
             "id": 0,
-            "internal_name": "teamwarcry",
+            "internal_name": "TeamWarCry",
             "name": "Gorag's Opus",
             "quote": "You and all your allies enter a frenzy.",
             "rarity": 1
@@ -319,7 +335,7 @@
             "desc": "Throw a cursed doll out that triggers any On-Kill effects you have every 1 second for 8 seconds.",
             "duration": 8,
             "id": 0,
-            "internal_name": "deathprojectile",
+            "internal_name": "DeathProjectile",
             "name": "Forgive Me Please",
             "quote": "Throw a cursed doll that repeatedly triggers your 'On Kill' effects.",
             "rarity": 1,
@@ -330,7 +346,7 @@
             "desc": "Fire a black hole that draws enemies within 30m into its center. Lasts 10 seconds",
             "duration": 10,
             "id": 0,
-            "internal_name": "blackhole",
+            "internal_name": "Blackhole",
             "name": "Primordial Cube",
             "quote": "Fire a black hole that draws enemies in.",
             "rarity": 1
@@ -340,7 +356,7 @@
             "desc": "Gain +100% Critical Strike Chance for 8 seconds.",
             "duration": 8,
             "id": 0,
-            "internal_name": "critonuse",
+            "internal_name": "CritOnUse",
             "name": "Ocular HUD",
             "quote": "Gain 100% Critical Strike Chance for 8 seconds.",
             "rarity": 1
@@ -350,7 +366,7 @@
             "desc": "Call 4 Strike Drones to fight for you. Lasts 25 seconds.",
             "duration": 25,
             "id": 0,
-            "internal_name": "dronebackup",
+            "internal_name": "DroneBackup",
             "name": "The Back-up",
             "quote": "Call drones for back up. Lasts 25 seconds.",
             "rarity": 1,
@@ -360,7 +376,7 @@
             "cooldown": 140,
             "desc": "Fires preon tendrils, zapping enemies within 35m for up to 600% damage/second. On contact, detonate in an enormous 20m explosion for 4000% damage.",
             "id": 0,
-            "internal_name": "bfg",
+            "internal_name": "BFG",
             "name": "Preon Accumulator",
             "quote": "Fire a ball of energy that electrocutes nearby enemies before detonating.",
             "rarity": 1,
@@ -371,7 +387,7 @@
             "desc": "Sprout wings and fly for 15 seconds. Gain +20% movement speed for the duration.",
             "duration": 15,
             "id": 0,
-            "internal_name": "jetpack",
+            "internal_name": "Jetpack",
             "name": "Milky Chrysalis",
             "quote": "Gain temporary flight.",
             "rarity": 1
@@ -380,7 +396,7 @@
             "cooldown": 20,
             "desc": "Call down a lightning strike on a targeted monster, dealing 3000% damage and stunning nearby monsters.",
             "id": 0,
-            "internal_name": "lightning",
+            "internal_name": "Lightning",
             "name": "Royal Capacitor",
             "quote": "Call down a lightning strike on a targeted monster.",
             "rarity": 1,
@@ -394,7 +410,7 @@
             ],
             "desc": "All random effects are rolled +1 (+1 per stack) times for a favorable outcome.",
             "id": 35,
-            "internal_name": "clover",
+            "internal_name": "Clover",
             "name": "57 Leaf Clover",
             "quote": "Luck is on your side.",
             "rarity": 3,
@@ -414,7 +430,7 @@
             ],
             "desc": "Increases movement speed by 14% (+14% per stack).",
             "id": 8,
-            "internal_name": "hoof",
+            "internal_name": "Hoof",
             "name": "Paul's Goat Hoof",
             "quote": "Move faster.",
             "rarity": 1,
@@ -429,13 +445,13 @@
             "unlock": "\"Is This Bugged?\""
         },
         "100": {
-            "Boss": "Overloading Worm",
+            "boss": "Overloading Worm",
             "category": [
                 "Damage"
             ],
             "desc": "10% chance on hit to down a lightning strike, dealing 500% (+500% per stack) damage.",
             "id": 0,
-            "internal_name": "lightningstrikeonhit",
+            "internal_name": "LightningStrikeOnHit",
             "name": "Charged Perforator",
             "quote": "Chance on hit to call down a lightning strike.",
             "rarity": 4,
@@ -449,13 +465,13 @@
             ]
         },
         "101": {
-            "Boss": "Imp Overlord",
+            "boss": "Imp Overlord",
             "category": [
                 "Damage"
             ],
             "desc": "Gain 5% critical chance. Critical Strikes bleed enemies for 240% base damage. Bleeding enemies explode on death for 400% (+400% per stack) damage, plus an additional 15% (+15% per stack) of their maximum health.",
             "id": 0,
-            "internal_name": "bleedonhitandexplode",
+            "internal_name": "BleedOnHitAndExplode",
             "name": "Shatterspleen",
             "quote": "Critical strikes always bleed enemies. Bleeding enemies now explode.",
             "rarity": 4,
@@ -481,13 +497,13 @@
             ]
         },
         "102": {
-            "Boss": "Clay Dunestrider",
+            "boss": "Clay Dunestrider",
             "category": [
                 "Healing"
             ],
             "desc": "While in combat, the nearest 1 (+1 per stack) enemies to you within 13m will be 'tethered' to you, dealing 100% damage per second, applying tar}], and healing you for 100% of the damage dealt.",
             "id": 0,
-            "internal_name": "siphononlowhealth",
+            "internal_name": "SiphonOnLowHealth",
             "name": "Mired Urn",
             "quote": "Siphon health from nearby enemies while in combat.",
             "rarity": 4,
@@ -507,7 +523,7 @@
             ],
             "desc": "Using a Shrine summons enemies (stronger per stack) nearby. Scales over time.",
             "id": 0,
-            "internal_name": "monstersonshrineuse",
+            "internal_name": "MonstersOnShrineUse",
             "name": "Defiant Gouge",
             "quote": "Using a Shrine summons enemies nearby.",
             "rarity": 5,
@@ -526,7 +542,7 @@
             ],
             "desc": "Creates a Ward of Power in a random location nearby that buffs both enemies and allies within 16m (+50% per stack)}], causing them to deal +50% damage.",
             "id": 0,
-            "internal_name": "randomdamagezone",
+            "internal_name": "RandomDamageZone",
             "name": "Mercurial Rachis",
             "quote": "Randomly create a Ward of Power. ALL characters deal bonus damage while in the Ward.",
             "rarity": 5,
@@ -546,7 +562,7 @@
             ],
             "desc": "Shoot down 1 (+1 per stack) projectiles within 20m every 0.5 seconds. Recharge rate scales with attack speed.",
             "id": 0,
-            "internal_name": "captaindefensematrix",
+            "internal_name": "CaptainDefenseMatrix",
             "name": "Defensive Microbots",
             "quote": "Shoot down nearby projectiles. Recharge rate scales with attack speed.",
             "rarity": 3,
@@ -566,7 +582,7 @@
             ],
             "desc": "Does nothing. Prioritized when used with 3D Printers.",
             "id": 0,
-            "internal_name": "scrapwhite",
+            "internal_name": "ScrapWhite",
             "name": "Item Scrap, White",
             "quote": "Does nothing. Prioritized when used with 3D Printers.",
             "rarity": 1
@@ -578,7 +594,7 @@
             ],
             "desc": "Does nothing. Prioritized when used with 3D Printers.",
             "id": 0,
-            "internal_name": "scrapgreen",
+            "internal_name": "ScrapGreen",
             "name": "Item Scrap, Green",
             "quote": "Does nothing. Prioritized when used with 3D Printers.",
             "rarity": 2
@@ -590,7 +606,7 @@
             ],
             "desc": "Does nothing. Prioritized when used with 3D Printers.",
             "id": 0,
-            "internal_name": "scrapred",
+            "internal_name": "ScrapRed",
             "name": "Item Scrap, Red",
             "quote": "Does nothing. Prioritized when used with 3D Printers.",
             "rarity": 3
@@ -602,7 +618,7 @@
             ],
             "desc": "Does nothing. Prioritized when used with 3D Printers.",
             "id": 0,
-            "internal_name": "scrapyellow",
+            "internal_name": "ScrapYellow",
             "name": "Item Scrap, Yellow",
             "quote": "Does nothing. Prioritized when used with 3D Printers.",
             "rarity": 4
@@ -614,7 +630,7 @@
             ],
             "desc": "Gain +1 (+1 per stack) maximum jump count.",
             "id": 9,
-            "internal_name": "feather",
+            "internal_name": "Feather",
             "name": "Hopoo Feather",
             "quote": "Gain an extra jump.",
             "rarity": 2,
@@ -633,7 +649,7 @@
             ],
             "desc": "All skill cooldowns are reduced by 2 (+1 per stack) seconds. All random effects are rolled +1 (+1 per stack) times for an unfavorable outcome.",
             "id": 0,
-            "internal_name": "lunarbadluck",
+            "internal_name": "LunarBadLuck",
             "name": "Purity",
             "quote": "Reduce your skill cooldowns by 2 seconds. You are unlucky.",
             "rarity": 5,
@@ -659,7 +675,7 @@
             ],
             "desc": "Replace your Secondary Skill  with Slicing Maelstrom.\\nCharge up a projectile that deals 175% damage per second to nearby enemies, exploding after 3 seconds to deal 700% damage and root enemies for 3 (+3 per stack) seconds. Recharges after 5 (+5 per stack) seconds.",
             "id": 0,
-            "internal_name": "lunarsecondaryreplacement",
+            "internal_name": "LunarSecondaryReplacement",
             "name": "Hooks of Heresy",
             "quote": "Replace your Secondary Skill with 'Slicing Maelstrom'.",
             "rarity": 5,
@@ -680,13 +696,13 @@
             "unlock": "Blockade Breaker"
         },
         "112": {
-            "Boss": "Solus Control Unit",
+            "boss": "Solus Control Unit",
             "category": [
                 "Utility"
             ],
             "desc": "Every 30 seconds, summon two Solus Probes that gain +100% (+100% per stack) damage per ally on your team.",
             "id": 0,
-            "internal_name": "roboballbuddy",
+            "internal_name": "RoboBallBuddy",
             "name": "Empathy Cores",
             "quote": "Recruit a pair of Solus Probes that gain power with more allies.",
             "rarity": 4,
@@ -700,13 +716,13 @@
             ]
         },
         "113": {
-            "Boss": "Grandparent",
+            "boss": "Grandparent",
             "category": [
                 "Healing"
             ],
             "desc": "Heal from incoming damage for 15 (+15 per stack).",
             "id": 0,
-            "internal_name": "parentegg",
+            "internal_name": "ParentEgg",
             "name": "Planula",
             "quote": "Receive flat healing when attacked.",
             "rarity": 4,
@@ -725,7 +741,7 @@
             ],
             "desc": "Replace your Special Skill with Ruin.\\nDealing damage adds a stack of Ruin for 10 (+10 per stack) seconds. Activating the skill detonates all Ruin stacks at unlimited range, dealing 300% damage plus 120% damage per stack of Ruin. Recharges after 8 (+8 per stack) seconds.",
             "id": 0,
-            "internal_name": "lunarspecialreplacement",
+            "internal_name": "LunarSpecialReplacement",
             "name": "Essence of Heresy",
             "quote": "Replace your Special Skill with 'Ruin'.",
             "rarity": 5,
@@ -751,7 +767,7 @@
             ],
             "desc": "25% chance to fire chain lightning for 80% TOTAL damage on up to 3 (+2 per stack) targets within 20m (+2m per stack).",
             "id": 11,
-            "internal_name": "chainlightning",
+            "internal_name": "ChainLightning",
             "name": "Ukulele",
             "quote": "...and his music was electric.",
             "rarity": 2,
@@ -776,7 +792,7 @@
             ],
             "desc": "Dealing damage heals you for 1 (+1 per stack) health.",
             "id": 13,
-            "internal_name": "seed",
+            "internal_name": "Seed",
             "name": "Leeching Seed",
             "quote": "Dealing damage heals you.",
             "rarity": 2,
@@ -796,7 +812,7 @@
             ],
             "desc": "Killing an enemy surrounds you with an ice storm that deals 1200% damage per second and slows enemies by 80% for 1.5s. The storm grows with every kill}], increasing its radius by 2m. Stacks up to 18m (+12m per stack).",
             "id": 14,
-            "internal_name": "icicle",
+            "internal_name": "Icicle",
             "name": "Frost Relic",
             "quote": "Killing enemies surrounds you with an ice storm.",
             "rarity": 3,
@@ -817,7 +833,7 @@
             ],
             "desc": "Killing enemies has a 7% chance to spawn a ghost of the killed enemy with 1500% damage. Lasts 30s (+30s per stack).",
             "id": 15,
-            "internal_name": "ghostonkill",
+            "internal_name": "GhostOnKill",
             "name": "Happiest Mask",
             "quote": "Chance on killing an enemy to summon a ghost.",
             "rarity": 3,
@@ -837,7 +853,7 @@
             ],
             "desc": "After standing still for 1 second, create a zone that heals for 4.5% (+2.25% per stack) of your health every second to all allies within 3m (+1.5m per stack).",
             "id": 16,
-            "internal_name": "mushroom",
+            "internal_name": "Mushroom",
             "name": "Bustling Fungus",
             "quote": "Heal all nearby allies after standing still for 1 second.",
             "rarity": 1,
@@ -862,7 +878,7 @@
             ],
             "desc": "Deal +75% (+75% per stack) damage to enemies above 90% health.",
             "id": 17,
-            "internal_name": "crowbar",
+            "internal_name": "Crowbar",
             "name": "Crowbar",
             "quote": "Deal bonus damage to enemies above 90% health.",
             "rarity": 1,
@@ -882,7 +898,7 @@
             ],
             "desc": "Gain 5% critical chance. Critical strikes increase attack speed by 12%. Maximum cap of 36% (+24% per stack) attack speed.",
             "id": 19,
-            "internal_name": "attackspeedoncrit",
+            "internal_name": "AttackSpeedOnCrit",
             "name": "Predatory Instincts",
             "quote": "'Critical Strikes' increase attack speed. Stacks 3 times.",
             "rarity": 2,
@@ -908,7 +924,7 @@
             ],
             "desc": "10% (+10% per stack) chance to bleed an enemy for 240% base damage.",
             "id": 20,
-            "internal_name": "bleedonhit",
+            "internal_name": "BleedOnHit",
             "name": "Tri-Tip Dagger",
             "quote": "Chance to bleed enemies on hit.",
             "rarity": 1,
@@ -927,7 +943,7 @@
             ],
             "desc": "Increases attack speed by 15% (+15% per stack).",
             "id": 0,
-            "internal_name": "syringe",
+            "internal_name": "Syringe",
             "name": "Soldier's Syringe",
             "quote": "Increases attack speed.",
             "rarity": 1,
@@ -946,7 +962,7 @@
             ],
             "desc": "Leaving combat boosts your movement speed by 30% (+30% per stack).",
             "id": 21,
-            "internal_name": "sprintoutofcombat",
+            "internal_name": "SprintOutOfCombat",
             "name": "Red Whip",
             "quote": "Move fast out of combat.",
             "rarity": 2,
@@ -967,7 +983,7 @@
             ],
             "desc": "Increase jump height. Creates a 5m-100m radius kinetic explosion on hitting the ground, dealing 1000%-10000% base damage that scales up with fall distance. Recharges in 10 (-50% per stack) seconds.",
             "id": 22,
-            "internal_name": "fallboots",
+            "internal_name": "FallBoots",
             "name": "H3AD-5T v2",
             "quote": "Increase jump height. Hold 'Interact' to slam down to the ground.",
             "rarity": 3,
@@ -987,7 +1003,7 @@
             ],
             "desc": "On level up or starting the Teleporter event}], drop a banner that strengthens all allies within 16m (+8m per stack). Raise attack and movement speed by 30%.",
             "id": 24,
-            "internal_name": "wardonlevel",
+            "internal_name": "WardOnLevel",
             "name": "Warbanner",
             "quote": "Drop a Warbanner on level up or starting the Teleporter event. Grants allies attack and movement speed.",
             "rarity": 1,
@@ -1007,7 +1023,7 @@
             ],
             "desc": "Killing 3 enemies within 1 second sends you into a frenzy for 6s (+4s per stack). Increases movement speed by 50% and attack speed by 100%.",
             "id": 46,
-            "internal_name": "warcryonmultikill",
+            "internal_name": "WarCryOnMultiKill",
             "name": "Berzerker's Pauldron",
             "quote": "Enter a frenzy after killing 3 enemies in quick succession.",
             "rarity": 2,
@@ -1027,7 +1043,7 @@
             ],
             "desc": "Falling below 25% health causes you to gain 40% movement speed and invisibility for 5s. Recharges every 30 seconds (-50% per stack).",
             "id": 25,
-            "internal_name": "phase",
+            "internal_name": "Phasing",
             "name": "Old War Stealthkit",
             "quote": "Turn invisible at low health.",
             "rarity": 2,
@@ -1046,7 +1062,7 @@
             ],
             "desc": "Gain 5% critical chance. Critical strikes heal for 8 (+4 per stack) health.",
             "id": 26,
-            "internal_name": "healoncrit",
+            "internal_name": "HealOnCrit",
             "name": "Harvester's Scythe",
             "quote": "'Critical Strikes' heal you.",
             "rarity": 2,
@@ -1072,7 +1088,7 @@
             ],
             "desc": "Increases base health regeneration by +3 hp/s (+3 hp/s per stack) while outside of combat.",
             "id": 27,
-            "internal_name": "healwhilesafe",
+            "internal_name": "HealWhileSafe",
             "name": "Cautious Slug",
             "quote": "Rapidly heal outside of danger.",
             "rarity": 1,
@@ -1092,7 +1108,7 @@
             ],
             "desc": "Jumping while sprinting boosts you forward by 10m (+10m per stack).",
             "id": 76,
-            "internal_name": "jumpboost",
+            "internal_name": "JumpBoost",
             "name": "Wax Quail",
             "quote": "Jumping while sprinting boosts you forward.",
             "rarity": 2,
@@ -1112,7 +1128,7 @@
             ],
             "desc": "Gain a shield equal to 8% (+8% per stack) of your maximum health. Recharges outside of danger.",
             "id": 29,
-            "internal_name": "personalshield",
+            "internal_name": "PersonalShield",
             "name": "Personal Shield Generator",
             "quote": "Gain a recharging shield.",
             "rarity": 1,
@@ -1131,7 +1147,7 @@
             ],
             "desc": "Store 100% (+100% per stack) of healing as Soul Energy. After your Soul Energy reaches 10% of your maximum health, fire a skull that deals 250% of your Soul Energy as damage.",
             "id": 31,
-            "internal_name": "novaonheal",
+            "internal_name": "NovaOnHeal",
             "name": "N'kuhana's Opinion",
             "quote": "Fire haunting skulls when healed.",
             "rarity": 3,
@@ -1152,7 +1168,7 @@
             ],
             "desc": "15% (+15% per stack) chance to block incoming damage. Unaffected by luck.",
             "id": 1,
-            "internal_name": "bear",
+            "internal_name": "Bear",
             "name": "Tougher Times",
             "quote": "Chance to block incoming damage.",
             "rarity": 1,
@@ -1172,7 +1188,7 @@
             ],
             "desc": "2 seconds after getting hurt, heal for 20 plus an additional 5% (+5% per stack) of maximum health.",
             "id": 36,
-            "internal_name": "medkit",
+            "internal_name": "Medkit",
             "name": "Medkit",
             "quote": "Receive a delayed heal after taking damage.",
             "rarity": 1,
@@ -1193,7 +1209,7 @@
             ],
             "desc": "Hold an additional equipment charge (+1 per stack). Reduce equipment cooldown by 15% (+15% per stack).",
             "id": 30,
-            "internal_name": "equipmentmagazine",
+            "internal_name": "EquipmentMagazine",
             "name": "Fuel Cell",
             "quote": "Hold an additional equipment charge. Reduce equipment cooldown.",
             "rarity": 2,
@@ -1221,7 +1237,7 @@
             ],
             "desc": "Killing an enemy increases your health permanently by 1 (+1 per stack)}], up to a maximum of 100 (+100 per stack) health.",
             "id": 33,
-            "internal_name": "infusion",
+            "internal_name": "Infusion",
             "name": "Infusion",
             "quote": "Killing an enemy permanently increases your maximum health, up to 100.",
             "rarity": 2,
@@ -1247,7 +1263,7 @@
             ],
             "desc": "Fire out lightning that hits 3 (+2 per stack) enemies for 200% base damage every 0.5s. The Tesla Coil switches off every 10 seconds.",
             "id": 32,
-            "internal_name": "shocknearby",
+            "internal_name": "ShockNearby",
             "name": "Unstable Tesla Coil",
             "quote": "Shock all nearby enemies every 10 seconds.",
             "rarity": 3,
@@ -1268,7 +1284,7 @@
             ],
             "desc": "Killing an enemy ignites all enemies within 12m (+4m per stack) for 150% base damage. Additionally, enemies burn for 150% (+75% per stack) base damage.",
             "id": 39,
-            "internal_name": "igniteonkill",
+            "internal_name": "IgniteOnKill",
             "name": "Gasoline",
             "quote": "Killing enemies sets nearby enemies on fire.",
             "rarity": 1,
@@ -1293,7 +1309,7 @@
                 "Damage"
             ],
             "id": 48,
-            "internal_name": "boostdamage",
+            "internal_name": "BoostDamage",
             "name": "BoostDamage",
             "rarity": 0,
             "stats": [
@@ -1311,7 +1327,7 @@
                 "Utility"
             ],
             "id": 47,
-            "internal_name": "boosthp",
+            "internal_name": "BoostHP",
             "name": "BoostHP",
             "rarity": 0,
             "stats": [
@@ -1329,7 +1345,7 @@
             ],
             "desc": "20% (+20% per stack) chance on hit to fire homing hooks at up to 10 (+5 per stack) enemies for 100% TOTAL damage.",
             "id": 38,
-            "internal_name": "bouncenearby",
+            "internal_name": "BounceNearby",
             "name": "Sentient Meat Hook",
             "quote": "Chance to hook all nearby enemies.",
             "rarity": 3,
@@ -1356,7 +1372,7 @@
             ],
             "desc": "Activating an interactable launches 8 (+4 per stack) fireworks that deal 300% base damage.",
             "id": 42,
-            "internal_name": "firework",
+            "internal_name": "Firework",
             "name": "Bundle of Fireworks",
             "quote": "Activating an interactable launches fireworks at nearby enemies.",
             "rarity": 1,
@@ -1377,7 +1393,7 @@
             ],
             "desc": "18% (+10% per stack) chance on kill to drop an ammo pack that resets all skill cooldowns.",
             "id": 37,
-            "internal_name": "bandolier",
+            "internal_name": "Bandolier",
             "name": "Bandolier",
             "quote": "Chance on kill to drop an ammo pack that resets all skill cooldowns.",
             "rarity": 2,
@@ -1396,7 +1412,7 @@
             ],
             "desc": "All your attacks explode in a 4m (+1.5m per stack) radius for a bonus 60% TOTAL damage to nearby enemies.",
             "id": 2,
-            "internal_name": "behemoth",
+            "internal_name": "Behemoth",
             "name": "Brilliant Behemoth",
             "quote": "All your attacks explode!",
             "rarity": 3,
@@ -1416,7 +1432,7 @@
             ],
             "desc": "5% (+5% on stack) chance on hit to stun enemies for 2 seconds.",
             "id": 41,
-            "internal_name": "stunchanceonhit",
+            "internal_name": "StunChanceOnHit",
             "name": "Stun Grenade",
             "quote": "Chance to stun on hit.",
             "rarity": 1,
@@ -1435,7 +1451,7 @@
             ],
             "desc": "Increase base damage by 100% (+100% per stack). Reduce maximum health by 50% (+50% per stack).",
             "id": 43,
-            "internal_name": "lunardagger",
+            "internal_name": "LunarDagger",
             "name": "Shaped Glass",
             "quote": "Double your damage... BUT halve your health.",
             "rarity": 5,
@@ -1460,7 +1476,7 @@
             ],
             "desc": "30% chance on hit to gain 2 (+2 per stack) gold. Scales over time.\\nLose gold on taking damage equal to 100% (+100% per stack) of the maximum health percentage you lost.",
             "id": 44,
-            "internal_name": "goldonhit",
+            "internal_name": "GoldOnHit",
             "name": "Brittle Crown",
             "quote": "Gain gold on hit... BUT lose gold on getting hit.",
             "rarity": 5,
@@ -1485,7 +1501,7 @@
             ],
             "desc": "Convert all but 1 health into regenerating shields. Gain 50% (+25% per stack) maximum health.",
             "id": 49,
-            "internal_name": "shieldonly",
+            "internal_name": "ShieldOnly",
             "name": "Transcendence",
             "quote": "Convert all your health into shield. Increase maximum health.",
             "rarity": 5,
@@ -1504,7 +1520,7 @@
             ],
             "desc": "Reduce skill cooldowns by 25% (+25% per stack).",
             "id": 50,
-            "internal_name": "alienhead",
+            "internal_name": "AlienHead",
             "name": "Alien Head",
             "quote": "Reduces cooldowns for your skills.",
             "rarity": 3,
@@ -1525,7 +1541,7 @@
             ],
             "desc": "Kills reduce equipment cooldown by 4s (+2s per stack).",
             "id": 51,
-            "internal_name": "talisman",
+            "internal_name": "Talisman",
             "name": "Soulbound Catalyst",
             "quote": "Kills reduce equipment cooldown.",
             "rarity": 3,
@@ -1540,14 +1556,14 @@
             "unlock": "Newtist"
         },
         "46": {
-            "Boss": "Stone Titan",
+            "boss": "Stone Titan",
             "category": [
                 "Utility",
                 "Healing"
             ],
             "desc": "Increase maximum health by 40 (+40 per stack) and base health regeneration by +1.6 hp/s (+1.6 hp/s per stack).",
             "id": 52,
-            "internal_name": "knurl",
+            "internal_name": "Knurl",
             "name": "Titanic Knurl",
             "quote": "Boosts health and regeneration.",
             "rarity": 4,
@@ -1567,13 +1583,13 @@
             ]
         },
         "47": {
-            "Boss": "Beetle Queen",
+            "boss": "Beetle Queen",
             "category": [
                 "Utility"
             ],
             "desc": "Every 30 seconds, summon a Beetle Guard with bonus 300% damage and 100% health. Can have up to 1 (+1 per stack) Guards at a time.",
             "id": 53,
-            "internal_name": "beetlegland",
+            "internal_name": "BeetleGland",
             "name": "Queen's Gland",
             "quote": "Recruit a Beetle Guard.",
             "rarity": 4,
@@ -1591,7 +1607,7 @@
                 "Abandoned"
             ],
             "id": 54,
-            "internal_name": "burnnearby",
+            "internal_name": "BurnNearby",
             "name": "BurnNearby",
             "rarity": 0
         },
@@ -1619,7 +1635,7 @@
             ],
             "desc": "10% chance to fire a missile that deals 300% (+300% per stack) TOTAL damage.",
             "id": 3,
-            "internal_name": "missile",
+            "internal_name": "Missile",
             "name": "AtG Missile Mk. 1",
             "quote": "Chance to fire a missile.",
             "rarity": 2,
@@ -1638,7 +1654,7 @@
                 "Utility"
             ],
             "id": 56,
-            "internal_name": "cripplewardonlevel",
+            "internal_name": "CrippleWardOnLevel",
             "name": "CrippleWardOnLevel",
             "rarity": 0,
             "stats": [
@@ -1657,7 +1673,7 @@
             ],
             "desc": "Sprint speed is improved by 25% (+25% per stack).",
             "id": 57,
-            "internal_name": "sprintbonus",
+            "internal_name": "SprintBonus",
             "name": "Energy Drink",
             "quote": "Sprint faster.",
             "rarity": 1,
@@ -1676,7 +1692,7 @@
             ],
             "desc": "Add +1 (+1 per stack) charge of your Secondary skill.",
             "id": 58,
-            "internal_name": "secondaryskillmagazine",
+            "internal_name": "SecondarySkillMagazine",
             "name": "Backup Magazine",
             "quote": "Add an extra charge of your Secondary skill.",
             "rarity": 1,
@@ -1696,7 +1712,7 @@
             ],
             "desc": "5% (+5% per stack) chance on hit to attach a bomb to an enemy, detonating for 180% TOTAL damage.",
             "id": 59,
-            "internal_name": "stickybomb",
+            "internal_name": "StickyBomb",
             "name": "Sticky Bomb",
             "quote": "Chance on hit to attach a bomb to enemies.",
             "rarity": 1,
@@ -1716,7 +1732,7 @@
             ],
             "desc": "A hidden cache containing an item (80%/20%) will appear in a random location on each stage. Opening the cache consumes this item.",
             "id": 60,
-            "internal_name": "treasurecache",
+            "internal_name": "TreasureCache",
             "name": "Rusted Key",
             "quote": "Gain access to a Rusty Lockbox that contains a powerful item.",
             "rarity": 1,
@@ -1730,7 +1746,7 @@
             ],
             "desc": "Deal an additional 20% damage (+20% per stack) to bosses.",
             "id": 61,
-            "internal_name": "bossdamagebonus",
+            "internal_name": "BossDamageBonus",
             "name": "Armor-Piercing Rounds",
             "quote": "Deal extra damage to bosses.",
             "rarity": 1,
@@ -1751,7 +1767,7 @@
             ],
             "desc": "Increase armor by 30 (+30 per stack) while sprinting.",
             "id": 62,
-            "internal_name": "sprintarmor",
+            "internal_name": "SprintArmor",
             "name": "Rose Buckler",
             "quote": "Reduce incoming damage while sprinting.",
             "rarity": 2,
@@ -1770,7 +1786,7 @@
             ],
             "desc": "Hits that deal more than 400% damage also blasts enemies with a runic ice blast, slowing them by 80% for 3s (+3s per stack) and dealing 250% (+250% per stack) TOTAL damage. Recharges every 10 seconds.",
             "id": 63,
-            "internal_name": "icering",
+            "internal_name": "IceRing",
             "name": "Runald's Band",
             "quote": "High damage hits also blasts enemies with runic ice. Recharges over time.",
             "rarity": 2,
@@ -1796,7 +1812,7 @@
             ],
             "desc": "Hits that deal more than 400% damage also blasts enemies with a runic flame tornado}], dealing 300% (+300% per stack) TOTAL damage over time. Recharges every 10 seconds.",
             "id": 64,
-            "internal_name": "firering",
+            "internal_name": "FireRing",
             "name": "Kjaro's Band",
             "quote": "High damage hits also blasts enemies with a runic flame tornado. Recharges over time.",
             "rarity": 2,
@@ -1816,7 +1832,7 @@
             ],
             "desc": "Slow enemies on hit for -60% movement speed for 2s (+2s per stack).",
             "id": 65,
-            "internal_name": "slowonhit",
+            "internal_name": "SlowOnHit",
             "name": "Chronobauble",
             "quote": "Slow enemies on hit.",
             "rarity": 2,
@@ -1836,7 +1852,7 @@
             ],
             "desc": "On killing an enemy, spawn a lava pillar in a 12m (+2.4m per stack) radius for 350% (+280% per stack) base damage.",
             "id": 4,
-            "internal_name": "explodeondeath",
+            "internal_name": "ExplodeOnDeath",
             "name": "Will-o'-the-wisp",
             "quote": "Detonate enemies on kill.",
             "rarity": 2,
@@ -1861,7 +1877,7 @@
             ],
             "desc": "Upon death}], this item will be consumed and you will return to life with 3 seconds of invulnerability.",
             "id": 66,
-            "internal_name": "extralife",
+            "internal_name": "ExtraLife",
             "name": "Dio's Best Friend",
             "quote": "Cheat death. Consumed on use.",
             "rarity": 3,
@@ -1881,7 +1897,7 @@
             ],
             "desc": "Add +2 (+2 per stack) charges of your Utility skill. Reduces Utility skill cooldown by 33%.",
             "id": 68,
-            "internal_name": "utilityskillmagazine",
+            "internal_name": "UtilitySkillMagazine",
             "name": "Hardlight Afterburner",
             "quote": "Add 2 extra charges of your Utility skill. Reduce Utility skill cooldown.",
             "rarity": 3,
@@ -1903,7 +1919,7 @@
             ],
             "desc": "Gain the power of any killed elite monster for 8s (+5s per stack).",
             "id": 69,
-            "internal_name": "headhunter",
+            "internal_name": "HeadHunter",
             "name": "Wake of Vultures",
             "quote": "Temporarily steal the power of slain elites.",
             "rarity": 3,
@@ -1924,7 +1940,7 @@
             ],
             "desc": "Upon killing an elite monster, enter a frenzy for 4s (+4s per stack) where skills have 0.5s cooldowns.",
             "id": 70,
-            "internal_name": "killelitefrenzy",
+            "internal_name": "KillEliteFrenzy",
             "name": "Brainstalks",
             "quote": "Skills have NO cooldowns for a short period after killing an elite.",
             "rarity": 3,
@@ -1944,7 +1960,7 @@
             ],
             "desc": "Heal +100% (+100% per stack) more.",
             "id": 75,
-            "internal_name": "increasehealing",
+            "internal_name": "IncreaseHealing",
             "name": "Rejuvenation Rack",
             "quote": "Double the strength of healing.",
             "rarity": 3,
@@ -1964,7 +1980,7 @@
             ],
             "desc": "Heal +100% (+100% per stack) more. All healing is applied over time. Can heal for a maximum of 10% (-50% per stack) of your health per second.",
             "id": 71,
-            "internal_name": "repeatheal",
+            "internal_name": "RepeatHeal",
             "name": "Corpsebloom",
             "quote": "Double your healing... BUT it's applied over time.",
             "rarity": 5,
@@ -1990,7 +2006,7 @@
             ],
             "desc": "Reduce Equipment cooldown by 50% (+15% per stack). Forces your Equipment to activate whenever it is off cooldown.",
             "id": 74,
-            "internal_name": "autocastequipment",
+            "internal_name": "AutoCastEquipment",
             "name": "Gesture of the Drowned",
             "quote": "Dramatically reduce Equipment cooldown... BUT it automatically activates.",
             "rarity": 5,
@@ -2011,7 +2027,7 @@
             ],
             "desc": "Instantly kill Elite monsters below 13% (+13% per stack) health.",
             "id": 78,
-            "internal_name": "executelowhealthelite",
+            "internal_name": "ExecuteLowHealthElite",
             "name": "Old Guillotine",
             "quote": "Instantly kill low health Elite monsters.",
             "rarity": 2,
@@ -2032,7 +2048,7 @@
             ],
             "desc": "Activating your Equipment gives you +70% attack speed for 8s (+4s per stack).",
             "id": 79,
-            "internal_name": "energizedonequipmentuse",
+            "internal_name": "EnergizedOnEquipmentUse",
             "name": "War Horn",
             "quote": "Activating your Equipment gives you a burst of attack speed.",
             "rarity": 2,
@@ -2053,7 +2069,7 @@
             ],
             "desc": "Healing past full grants you a temporary barrier for 50% (+50% per stack) of the amount you healed.",
             "id": 80,
-            "internal_name": "barrieronoverheal",
+            "internal_name": "BarrierOnOverHeal",
             "name": "Aegis",
             "quote": "Healing past full grants you a temporary barrier.",
             "rarity": 3,
@@ -2074,7 +2090,7 @@
             ],
             "desc": "Killing an enemy fires out 3 homing daggers that deal 150% (+150% per stack) base damage.",
             "id": 5,
-            "internal_name": "dagger",
+            "internal_name": "Dagger",
             "name": "Ceremonial Dagger",
             "quote": "Killing an enemy releases homing daggers.",
             "rarity": 3,
@@ -2092,7 +2108,7 @@
                 "Hidden"
             ],
             "id": 77,
-            "internal_name": "drizzleplayerhelper",
+            "internal_name": "DrizzlePlayerHelper",
             "name": "DrizzlePlayerHelper",
             "rarity": 0,
             "stats": [
@@ -2115,7 +2131,7 @@
                 "Hidden"
             ],
             "id": 72,
-            "internal_name": "ghost",
+            "internal_name": "Ghost",
             "name": "Ghost",
             "rarity": 0
         },
@@ -2124,7 +2140,7 @@
                 "Hidden"
             ],
             "id": 73,
-            "internal_name": "healthdecay",
+            "internal_name": "HealthDecay",
             "name": "HealthDecay",
             "rarity": 0,
             "stats": [
@@ -2141,7 +2157,7 @@
                 "Abandoned"
             ],
             "id": 45,
-            "internal_name": "mageattunement",
+            "internal_name": "MageAttunement",
             "name": "MageAttunement",
             "rarity": 0
         },
@@ -2151,7 +2167,7 @@
             ],
             "desc": "Reduce ALL stats by -5% (-5% per stack).",
             "id": 81,
-            "internal_name": "tonicaffliction",
+            "internal_name": "TonicAffliction",
             "name": "Tonic Affliction",
             "quote": "Reduce ALL stats when not under the effects of Spinel Tonic.",
             "rarity": 0,
@@ -2165,14 +2181,14 @@
             ]
         },
         "75": {
-            "Boss": "Aurelionite",
+            "boss": "Aurelionite",
             "category": [
                 "Utility",
                 "WorldUnique"
             ],
             "desc": "Summon Aurelionite during the teleporter event. It has 100% (+50% per stack) damage and 100% (+100% per stack) health.",
             "id": 82,
-            "internal_name": "titangoldduringtp",
+            "internal_name": "TitanGoldDuringTP",
             "name": "Halcyon Seed",
             "quote": "Summon Aurelionite during the Teleporter event.",
             "rarity": 4,
@@ -2192,14 +2208,14 @@
             ]
         },
         "76": {
-            "Boss": "Grovetender",
+            "boss": "Grovetender",
             "category": [
                 "Damage",
                 "SprintRelated"
             ],
             "desc": "Fire a tracking wisp for 300% (+300% per stack) damage. Fires every 1.6 seconds while sprinting. Fire rate increases with movement speed.",
             "id": 83,
-            "internal_name": "sprintwisp",
+            "internal_name": "SprintWisp",
             "name": "Little Disciple",
             "quote": "Fire tracking wisps while sprinting.",
             "rarity": 4,
@@ -2220,7 +2236,7 @@
             ],
             "desc": "Gain a temporary barrier on kill for 15 health (+15 per stack).",
             "id": 84,
-            "internal_name": "barrieronkill",
+            "internal_name": "BarrierOnKill",
             "name": "Topaz Brooch",
             "quote": "Gain a temporary barrier on kill.",
             "rarity": 1,
@@ -2239,7 +2255,7 @@
             ],
             "desc": "After hitting an enemy 5 times, reduce their armor by 60 for 8 (+8 per stack) seconds.",
             "id": 85,
-            "internal_name": "armorreductiononhit",
+            "internal_name": "ArmorReductionOnHit",
             "name": "Shattering Justice",
             "quote": "Reduce the armor of enemies after repeatedly striking them.",
             "rarity": 3,
@@ -2259,7 +2275,7 @@
             ],
             "desc": "Release a healing nova during the Teleporter event, healing all nearby allies for 50% of their maximum health. Occurs 1 (+1 per stack) times.",
             "id": 86,
-            "internal_name": "tphealingnova",
+            "internal_name": "TPHealingNova",
             "name": "Lepton Daisy",
             "quote": "Periodically release a healing nova during the Teleporter event and 'Holdout Zones' such as the Void Fields.",
             "rarity": 2,
@@ -2279,7 +2295,7 @@
             ],
             "desc": "Killing an enemy spawns a healing orb that heals for 8 plus an additional 2% (+2% per stack) of maximum health.",
             "id": 6,
-            "internal_name": "tooth",
+            "internal_name": "Tooth",
             "name": "Monster Tooth",
             "quote": "Drop a healing orb on kill.",
             "rarity": 1,
@@ -2298,7 +2314,7 @@
             ],
             "desc": "Increase damage to enemies within 13m by 20% (+20% per stack).",
             "id": 87,
-            "internal_name": "nearbydamagebonus",
+            "internal_name": "NearbyDamageBonus",
             "name": "Focus Crystal",
             "quote": "Deal bonus damage to nearby enemies.",
             "rarity": 1,
@@ -2318,7 +2334,7 @@
             ],
             "desc": "Replace your Utility Skill with Shadowfade.\\nFade away, becoming intangible and gaining +30% movement speed. Heal for 18.2% (+18.2% per stack) of your maximum health. Lasts 3 (+3 per stack) seconds.",
             "id": 88,
-            "internal_name": "lunarutilityreplacement",
+            "internal_name": "LunarUtilityReplacement",
             "name": "Strides of Heresy",
             "quote": "Replace your Utility Skill with 'Shadowfade'.",
             "rarity": 5,
@@ -2343,7 +2359,7 @@
                 "Hidden"
             ],
             "id": 89,
-            "internal_name": "monsoonplayerhelper",
+            "internal_name": "MonsoonPlayerHelper",
             "name": "MonsoonPlayerHelper",
             "rarity": 0,
             "stats": [
@@ -2362,7 +2378,7 @@
             ],
             "desc": "Getting hit causes you to explode in a burst of razors, dealing 160% damage. Hits up to 5 (+2 per stack) targets in a 25m (+10m per stack) radius",
             "id": 90,
-            "internal_name": "thorns",
+            "internal_name": "Thorns",
             "name": "Razorwire",
             "quote": "Retaliate in a burst of razors on taking damage.",
             "rarity": 2,
@@ -2387,7 +2403,7 @@
             ],
             "desc": "Increases maximum health by 25 (+25 per stack).",
             "id": 91,
-            "internal_name": "flathealth",
+            "internal_name": "FlatHealth",
             "name": "Bison Steak",
             "quote": "Gain 25 max health.",
             "rarity": 1,
@@ -2401,14 +2417,14 @@
             ]
         },
         "85": {
-            "Boss": "Cleansing Pool",
+            "boss": "Cleansing Pool",
             "category": [
                 "Utility",
                 "WorldUnique"
             ],
             "desc": "Increases maximum health by 10% (+10% per stack).",
             "id": 92,
-            "internal_name": "pearl",
+            "internal_name": "Pearl",
             "name": "Pearl",
             "quote": "Increase your maximum health.",
             "rarity": 4,
@@ -2422,7 +2438,7 @@
             ]
         },
         "86": {
-            "Boss": "Cleansing Pool",
+            "boss": "Cleansing Pool",
             "category": [
                 "Damage",
                 "Healing",
@@ -2431,7 +2447,7 @@
             ],
             "desc": "Increases ALL stats by 10% (+10% per stack).",
             "id": 93,
-            "internal_name": "shinypearl",
+            "internal_name": "ShinyPearl",
             "name": "Irradiant Pearl",
             "quote": "Increase ALL of your stats.",
             "rarity": 4,
@@ -2487,7 +2503,7 @@
             ],
             "desc": "4% (+4% on stack) chance on kill to drop a treasure worth $25. Scales over time.",
             "id": 94,
-            "internal_name": "bonusgoldpackonkill",
+            "internal_name": "BonusGoldPackOnKill",
             "name": "Ghor's Tome",
             "quote": "Chance on kill to drop a treasure.",
             "rarity": 2,
@@ -2507,7 +2523,7 @@
             ],
             "desc": "Killing 4 enemies in 7 seconds charges the Resonance Disc. The disc launches itself toward a target for 300% base damage (+300% per stack)}], piercing all enemies it doesn't kill, and then explodes for 1000% base damage (+1000% per stack). Returns to the user, striking all enemies along the way for 300% base damage (+300% per stack).",
             "id": 95,
-            "internal_name": "laserturbine",
+            "internal_name": "LaserTurbine",
             "name": "Resonance Disc",
             "quote": "Obtain a Resonance Disc charged by killing enemies. Fires automatically when fully charged.",
             "rarity": 3,
@@ -2533,7 +2549,7 @@
             ],
             "desc": "Replace your Primary Skill with Hungering Gaze.\\nFire a flurry of tracking shards that detonate after a delay, dealing 120% base damage. Hold up to 12 charges (+12 per stack) that reload after 2 seconds (+2 per stack).",
             "id": 96,
-            "internal_name": "lunarprimaryreplacement",
+            "internal_name": "LunarPrimaryReplacement",
             "name": "Visions of Heresy",
             "quote": "Replace your Primary Skill with 'Hungering Gaze'.",
             "rarity": 5,
@@ -2559,7 +2575,7 @@
             ],
             "desc": "Your attacks have a 10% (+10% per stack) chance to 'Critically Strike', dealing double damage.",
             "id": 7,
-            "internal_name": "critglasses",
+            "internal_name": "CritGlasses",
             "name": "Lens-Maker's Glasses",
             "quote": "Chance to 'Critically Strike', dealing double damage.",
             "rarity": 1,
@@ -2573,13 +2589,13 @@
             ]
         },
         "90": {
-            "Boss": "Wandering Vagrant",
+            "boss": "Wandering Vagrant",
             "category": [
                 "Damage"
             ],
             "desc": "Falling below 25% health causes you to explode, dealing 6000% base damage. Recharges every 30 / (2 +1 per stack) seconds .",
             "id": 97,
-            "internal_name": "novaonlowhealth",
+            "internal_name": "NovaOnLowHealth",
             "name": "Genesis Loop",
             "quote": "Fire an electric nova at low health.",
             "rarity": 4,
@@ -2593,21 +2609,22 @@
             ]
         },
         "91": {
+            "category": [],
             "desc": "Seems to do nothing... but...",
             "id": 98,
-            "internal_name": "lunartrinket",
+            "internal_name": "LunarTrinket",
             "name": "Beads of Fealty",
             "quote": "Seems to do nothing... but...",
             "rarity": 5
         },
         "92": {
-            "Boss": "Bulwark's Ambry",
+            "boss": "Bulwark's Ambry",
             "category": [
                 "WorldUnique"
             ],
             "desc": "A stone shard with immense power.",
             "id": 101,
-            "internal_name": "artifactkey",
+            "internal_name": "ArtifactKey",
             "name": "Artifact Key",
             "quote": "A stone shard with immense power.",
             "rarity": 4
@@ -2618,7 +2635,7 @@
             ],
             "desc": "Reduce all incoming damage by 5 (+5 per stack). Cannot be reduced below 1.",
             "id": 102,
-            "internal_name": "armorplate",
+            "internal_name": "ArmorPlate",
             "name": "Repulsion Armor Plate",
             "quote": "Receive flat damage reduction from all attacks.",
             "rarity": 1,
@@ -2638,7 +2655,7 @@
             ],
             "desc": "Activating an interactable summons a Squid Turret that attacks nearby enemies at 100% (+100% per stack) attack speed. Lasts 30 seconds.",
             "id": 103,
-            "internal_name": "squid",
+            "internal_name": "Squid",
             "name": "Squid Polyp",
             "quote": "Activating an interactable summons a Squid Turret nearby.",
             "rarity": 2,
@@ -2658,7 +2675,7 @@
             ],
             "desc": "Enemies with 4 or more debuffs are marked for death}], increasing damage taken by 50% from all sources for 7 (+7 per stack) seconds.",
             "id": 104,
-            "internal_name": "deathmark",
+            "internal_name": "DeathMark",
             "name": "Death Mark",
             "quote": "Enemies with 4 or more debuffs are marked for death, taking bonus damage.",
             "rarity": 2,
@@ -2677,7 +2694,7 @@
             ],
             "desc": "On kill, plant a healing fruit seed that grows into a plant after 5 seconds.\\nThe plant heals for 10% of maximum health every second to all allies within 5m (+5.0m per stack). Lasts 10 seconds.",
             "id": 105,
-            "internal_name": "plant",
+            "internal_name": "Plant",
             "name": "Interstellar Desk Plant",
             "quote": "Plant a healing fruit on kill.",
             "rarity": 3,
@@ -2691,14 +2708,14 @@
             ]
         },
         "97": {
-            "Boss": "Grandparent",
+            "boss": "Grandparent",
             "category": [
                 "Utility",
                 "OnKillEffect"
             ],
             "desc": "7% chance (+1% per stack) on kill to summon an Ancestral Pod that distracts enemies.\\nOnce it fully grows, it will hatch into an allied Parent with 100% health (+100% per stack).",
             "id": 106,
-            "internal_name": "ancestralincubator",
+            "internal_name": "AncestralIncubator",
             "name": "Ancestral Incubator",
             "quote": "Chance on kill to summon an Ancestral Pod.",
             "rarity": 0,
@@ -2724,7 +2741,7 @@
             ],
             "desc": "Teleporters charge 30% (+30% per stack) faster}], but the size of the Teleporter zone is 50% (-50% per stack) smaller.",
             "id": 107,
-            "internal_name": "focusconvergence",
+            "internal_name": "FocusConvergence",
             "name": "Focused Convergence",
             "quote": "Increase the speed of Teleporter charging... BUT reduce the size of the zone.",
             "rarity": 5,
@@ -2745,13 +2762,13 @@
             "unlock": "Never Back Down"
         },
         "99": {
-            "Boss": "Magma Worm",
+            "boss": "Magma Worm",
             "category": [
                 "Damage"
             ],
             "desc": "10% chance on hit to call forth 3 magma balls from an enemy, dealing 300% (+300% per stack) damage each.",
             "id": 0,
-            "internal_name": "fireballsonhit",
+            "internal_name": "FireballsOnHit",
             "name": "Molten Perforator",
             "quote": "Chance on hit to fire magma balls.",
             "rarity": 4,
@@ -2768,63 +2785,75 @@
     "survivors": {
         "1": {
             "desc": "A macabre, poison-spewing ex-prisoner, Acrid fights with a potent array of damage-over-time effects and self-sustaining melee ability.",
-            "internal_name": "acrid",
-            "name": "Acrid"
+            "internal_name": "Croco",
+            "name": "Acrid",
+            "skill_prefix": "Croco"
         },
         "10": {
             "desc": "A modified multi-purpose robot, MUL-T lives up to its designation through its sheer versatility. Slow but highly durable, it possesses the unique ability to select two of four primary weapons and utilize them in two different configurations.",
-            "internal_name": "mult",
-            "name": "MUL-T"
+            "internal_name": "Toolbot",
+            "name": "MUL-T",
+            "skill_prefix": "Toolbot"
         },
         "11": {
             "desc": "A highly mobile and maneuverable fighter, the Mercenary strikes swiftly and rapidly to devastate enemies, gaining both invincibility and mobility with his various attacks. ",
-            "internal_name": "mercenary",
-            "name": "Mercenary"
+            "internal_name": "Mercenary",
+            "name": "Mercenary",
+            "skill_prefix": "Merc"
         },
         "12": {
             "desc": "REX is a half robot / half plant that uses HP to cast devastating skills from a distance. Their attacks are powerful and strike from a great distance, but in exchange, some require REX's health as a resource. ",
-            "internal_name": "rex",
-            "name": "Rex"
+            "internal_name": "Treebot",
+            "name": "Rex",
+            "skill_prefix": "Treebot"
         },
         "2": {
             "desc": "Wielding a diverse armament of destructive skills, Artificer's strength lies in her devastating offense that can break through even the bulkiest of enemies.",
-            "internal_name": "artificer",
-            "name": "Artificer"
+            "internal_name": "Mage",
+            "name": "Artificer",
+            "skill_prefix": "Mage"
         },
         "3": {
             "desc": "A swift and sneaky fighter, the Bandit focuses on keeping on the move to catch enemies off guard and deal ruinous damage, before finishing the job with Lights Out.",
-            "internal_name": "bandit2",
-            "name": "Bandit"
+            "internal_name": "Bandit2",
+            "name": "Bandit",
+            "skill_prefix": "Bandit2"
         },
         "4": {
             "desc": "Commander of the UES Safe Travels, the Captain's strength is his ability to call down a variety of tactical drops from orbit, from a humble healing beacon to the spectacularly haphazard OGM-72 'DIABLO' Strike. ",
-            "internal_name": "captain",
-            "name": "Captain"
+            "internal_name": "Captain",
+            "name": "Captain",
+            "skill_prefix": "Captain"
         },
         "5": {
             "desc": "Unlocked by default, the Commando is intended as a well-rounded and easily understood character with no particular weaknesses or strengths, combining mobility and offense in his tactics.",
-            "internal_name": "commando",
-            "name": "Commando"
+            "internal_name": "Commando",
+            "name": "Commando",
+            "skill_prefix": "Commando"
         },
         "6": {
             "desc": "With an assortment of deployable gadgets, the Engineer's strength comes not from him alone, but rather his ability to set up a variety of defensive measures.",
-            "internal_name": "engineer",
-            "name": "Engineer"
+            "internal_name": "Engineer",
+            "name": "Engineer",
+            "skill_prefix": "Engi"
         },
         "7": {
             "desc": "Heretic has extremely high base health, can triple jump, and has negative health regeneration, causing her to lose health over time instead of recovering it.",
-            "internal_name": "heretic",
-            "name": "Heretic"
+            "internal_name": "Heretic",
+            "name": "Heretic",
+            "skill_prefix": "Heretic"
         },
         "8": {
             "desc": "With powerful homing attacks and very high mobility, but very low health and somewhat limited range on many of her skills, the Huntress can be considered a \"glass cannon\" character.",
-            "internal_name": "huntress",
-            "name": "Huntress"
+            "internal_name": "Huntress",
+            "name": "Huntress",
+            "skill_prefix": "Huntress"
         },
         "9": {
             "desc": "An incredibly mobile and heavy cargo loader, the Loader is capable of delivering some of the hardest-hitting attacks in the game. When utilizing velocity to her advantage, she is able to topple many powerful monsters in just a single punch.",
-            "internal_name": "loader",
-            "name": "Loader"
+            "internal_name": "Loader",
+            "name": "Loader",
+            "skill_prefix": "Loader"
         }
     }
 }

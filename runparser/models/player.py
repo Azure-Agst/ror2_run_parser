@@ -16,6 +16,10 @@ from bs4 import Tag
 import logging
 import re
 
+from .item import Item
+from .equipment import Equipment
+from .survivor import Survivor
+
 logger = logging.getLogger(__name__)
 
 
@@ -30,11 +34,11 @@ class Player():
 
     def reset(self):
         self.name: str = None
-        self.character: str = None
+        self.character: Survivor = None
         self.killed: bool = False
         self.killedBy: str = None
-        self.equipment: str = None
-        self.itemStacks: dict = {}
+        self.equipment: Equipment = None
+        self.items: [Item] = []
 
         self.gamesPlayed: int = 0
         self.maxLevel: int = 0
@@ -86,7 +90,7 @@ class Player():
         logger.debug("Parsing player...")
 
         self.name = rootTag.find('name').text
-        self.character = rootTag.find('bodyname').text.replace("Body", "")
+        self.character = Survivor(rootTag.find('bodyname').text.replace("Body", ""))
         self.killed = rootTag.find('isdead').text == '1'
         self.killedBy = rootTag.find('killerbodyname').text.replace("Body", "").replace("Invalid", "N/A")
 
@@ -97,9 +101,12 @@ class Player():
         self.distanceTravelled = float(statsheet.find('totaldistancetraveled').text) if statsheet.find('totaldistancetraveled') != None else 0.0
         self.stagesCompleted = int(statsheet.find('totalstagescompleted').text) if statsheet.find('totalstagescompleted') != None else 0
         self.timeAlive = float(statsheet.find('totaltimealive').text) if statsheet.find('totaltimealive') != None else 0.0
-        self.equipment = rootTag.find('equipment').text if rootTag.find('equipment') != None else "N/A"
-        for item in rootTag.find('itemstacks').find_all():
-            self.itemStacks[item.name] = int(item.text)
+        
+        if rootTag.find('equipment') is not None:
+            self.equipment = Equipment(rootTag.find('equipment').text)
+        
+        for item_tag in rootTag.find('itemstacks').find_all():
+            self.items.append(Item(item_tag.name, count=int(item_tag.text)))
 
         self.totalKills = int(statsheet.find('totalkills').text) if statsheet.find('totalgoldcollected') != None else 0
         self.minionKills = int(statsheet.find('totalminionkills').text) if statsheet.find('totalminionkills') != None else 0
