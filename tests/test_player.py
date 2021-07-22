@@ -86,4 +86,3 @@ class test_Player(unittest.TestCase):
         self.assertEqual(self.player.totalTimesFired['lightning'], 12)
         self.assertEqual(self.player.totalTimesVisited['blackbeach'], 2)
         self.assertEqual(self.player.totalTimesCleared['mysteryspace'], 1)
-

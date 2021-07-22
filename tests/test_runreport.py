@@ -2,19 +2,16 @@
 
 from bs4 import BeautifulSoup, Tag
 from runparser import RunReport
-from pathlib import Path
 
 import unittest
 import os
-import time
 
-import logging
 
 class test_RunReport(unittest.TestCase):
     """Basic RunReport test cases."""
 
-    report : RunReport = None
-    file_root : Tag = None
+    report: RunReport = None
+    file_root: Tag = None
 
     def setUp(self):
         """Set up the test cases."""
@@ -24,12 +21,10 @@ class test_RunReport(unittest.TestCase):
 
         self.report = RunReport(self.file_root)
 
-
     def tearDown(self):
         """Tear down the test cases."""
         del self.report
         del self.file_root
-
 
     def test_RunReport_GeneralData(self):
         """Tests general run report data."""
@@ -41,7 +36,6 @@ class test_RunReport(unittest.TestCase):
         self.assertEqual(self.report.end_timestamp, 5249308344751840833)
         self.assertEqual(self.report.total_time, 2501.105)
         self.assertEqual(self.report.run_time, 2216.018)
-
 
     def test_RunReport_RuleData(self):
         """Tests run report's rule data."""
