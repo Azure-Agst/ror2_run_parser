@@ -28,7 +28,7 @@ from .runparser import RunParser
 from .autorunparser import AutoRunParser
 
 # db classes
-from .db import RunParserDB, RPDB_EntryNotFoundError, RPDB_ArgumentError
+from .db import RunParserDB
 
 # models
 from .models.runreport import RunReport

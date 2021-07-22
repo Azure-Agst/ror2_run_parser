@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from runparser import RunParserDB, RPDB_EntryNotFoundError, RPDB_ArgumentError
+from runparser import RunParserDB
 
 import unittest
 
@@ -30,15 +30,15 @@ class test_RunParserDB(unittest.TestCase):
         self.assertEqual(item['internal_name'], "EquipmentMagazine")
 
         # get nonexistent item by internal name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_item("thisdoesnotexist")
 
         # get nonexistent item by actual name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_item(name="Fake Item")
 
         # call with no arguments
-        with self.assertRaises(RPDB_ArgumentError):
+        with self.assertRaises(RunParserDB.RPDB_ArgumentError):
             self.db.get_item()
 
     def test_RunParserDB_Equipment(self):
@@ -53,15 +53,15 @@ class test_RunParserDB(unittest.TestCase):
         self.assertEqual(item['internal_name'], "Meteor")
 
         # get nonexistent equipment by internal name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_equipment("thisdoesnotexist")
 
         # get nonexistent equipment by actual name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_equipment(name="Fake Equipment")
 
         # call with no arguments
-        with self.assertRaises(RPDB_ArgumentError):
+        with self.assertRaises(RunParserDB.RPDB_ArgumentError):
             self.db.get_equipment()
 
     def test_RunParserDB_Artifacts(self):
@@ -76,15 +76,15 @@ class test_RunParserDB(unittest.TestCase):
         self.assertEqual(item['internal_name'], "Sacrifice")
 
         # get artifact equipment by internal name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_artifact("thisdoesnotexist")
 
         # get artifact equipment by actual name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_artifact(name="Fake Artifact")
 
         # call with no arguments
-        with self.assertRaises(RPDB_ArgumentError):
+        with self.assertRaises(RunParserDB.RPDB_ArgumentError):
             self.db.get_artifact()
 
     def test_RunParserDB_Survivors(self):
@@ -99,13 +99,13 @@ class test_RunParserDB(unittest.TestCase):
         self.assertEqual(item['internal_name'], "Toolbot")
 
         # get survivor equipment by internal name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_survivor("thisdoesnotexist")
 
         # get survivor equipment by actual name
-        with self.assertRaises(RPDB_EntryNotFoundError):
+        with self.assertRaises(RunParserDB.RPDB_EntryNotFoundError):
             self.db.get_survivor(name="Fake Survivor")
 
         # call with no arguments
-        with self.assertRaises(RPDB_ArgumentError):
+        with self.assertRaises(RunParserDB.RPDB_ArgumentError):
             self.db.get_survivor()
