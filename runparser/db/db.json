@@ -3,82 +3,98 @@
         "1": {
             "desc": "Friendly fire is enabled for both survivors and monsters alike.",
             "internal_name": "FriendlyFire",
-            "name": "Artifact of Chaos"
+            "name": "Artifact of Chaos",
+            "short_name": "Chaos"
         },
         "10": {
             "desc": "Monsters will be of only one type per stage.",
             "internal_name": "SingleMonsterType",
-            "name": "Artifact of Kin"
+            "name": "Artifact of Kin",
+            "short_name": "Kin"
         },
         "11": {
             "desc": "Players always spawn as a random survivor.",
             "internal_name": "RandomSurvivorOnRespawn",
-            "name": "Artifact of Metamorphosis"
+            "name": "Artifact of Metamorphosis",
+            "short_name": "Metamorphosis"
         },
         "12": {
             "desc": "Monsters drop items on death, but Chests no longer spawn.",
             "internal_name": "Sacrifice",
-            "name": "Artifact of Sacrifice"
+            "name": "Artifact of Sacrifice",
+            "short_name": "Sacrifice"
         },
         "13": {
             "desc": "Wisps emerge from defeated monsters.",
             "internal_name": "WispOnDeath",
-            "name": "Artifact of Soul"
+            "name": "Artifact of Soul",
+            "short_name": "Soul"
         },
         "14": {
             "desc": "Enemies drop multiple exploding bombs on death.",
             "internal_name": "Bomb",
-            "name": "Artifact of Spite"
+            "name": "Artifact of Spite",
+            "short_name": "Spite"
         },
         "15": {
             "desc": "Monster spawns are doubled, but monster maximum health is halved.",
             "internal_name": "Swarms",
-            "name": "Artifact of Swarms"
+            "name": "Artifact of Swarms",
+            "short_name": "Swarms"
         },
         "16": {
             "desc": "Your relentless doppelganger will invade every 10 minutes.",
             "internal_name": "ShadowClone",
-            "name": "Artifact of Vengeance"
+            "name": "Artifact of Vengeance",
+            "short_name": "Vengeance"
         },
         "2": {
             "desc": "Choose your items.",
             "internal_name": "Command",
-            "name": "Artifact of Command"
+            "name": "Artifact of Command",
+            "short_name": "Command"
         },
         "3": {
             "desc": "When one player dies, everyone dies. Enable only if you want to truly put your teamwork and individual skill to the ultimate test.",
             "internal_name": "TeamDeath",
-            "name": "Artifact of Death"
+            "name": "Artifact of Death",
+            "short_name": "Death"
         },
         "4": {
             "desc": "Monsters can appear outside their usual environments.",
             "internal_name": "MixEnemy",
-            "name": "Artifact of Dissonance"
+            "name": "Artifact of Dissonance",
+            "short_name": "Dissonance"
         },
         "5": {
             "desc": "Spawn with a random equipment that changes every time it's activated.",
             "internal_name": "Enigma",
-            "name": "Artifact of Enigma"
+            "name": "Artifact of Enigma",
+            "short_name": "Enigma"
         },
         "6": {
             "desc": "Monsters gain items between stages.",
             "internal_name": "MonsterTeamGainsItems",
-            "name": "Artifact of Evolution"
+            "name": "Artifact of Evolution",
+            "short_name": "Evolution"
         },
         "7": {
             "desc": "Fall damage is doubled and lethal.",
             "internal_name": "WeakAssKnees",
-            "name": "Artifact of Frailty"
+            "name": "Artifact of Frailty",
+            "short_name": "Frailty"
         },
         "8": {
             "desc": "Allies deal 500% damage, but have 10% health.",
             "internal_name": "Glass",
-            "name": "Artifact of Glass"
+            "name": "Artifact of Glass",
+            "short_name": "Glass"
         },
         "9": {
             "desc": "Enemies can only spawn as elites.",
             "internal_name": "EliteOnly",
-            "name": "Artifact of Honor"
+            "name": "Artifact of Honor",
+            "short_name": "Honor"
         }
     },
     "equipment": {
