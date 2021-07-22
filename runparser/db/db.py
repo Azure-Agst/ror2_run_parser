@@ -7,7 +7,7 @@ runparser.db.RunParserDB
 uses tinydb to get data on entries in the game
 
 :copyright: (c) 2021 by Andrew Augustine.
-:license: Apache2, see LICENSE for more details.
+:license: GPL-3.0, see LICENSE for more details.
 """
 
 from tinydb import TinyDB, Query
