@@ -2609,6 +2609,7 @@
             ]
         },
         "91": {
+            "category": [],
             "desc": "Seems to do nothing... but...",
             "id": 98,
             "internal_name": "LunarTrinket",
@@ -2822,7 +2823,7 @@
             "desc": "Commander of the UES Safe Travels, the Captain's strength is his ability to call down a variety of tactical drops from orbit, from a humble healing beacon to the spectacularly haphazard OGM-72 'DIABLO' Strike. ",
             "internal_name": "Captain",
             "name": "Captain",
-            "skill_prefix": "Captsin"
+            "skill_prefix": "Captain"
         },
         "5": {
             "desc": "Unlocked by default, the Commando is intended as a well-rounded and easily understood character with no particular weaknesses or strengths, combining mobility and offense in his tactics.",
