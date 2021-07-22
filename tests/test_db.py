@@ -22,12 +22,12 @@ class test_RunParserDB(unittest.TestCase):
         """Test getting Item data."""
 
         # get item by internal name
-        item = self.db.get_item("lunarbadluck")
+        item = self.db.get_item("LunarBadLuck")
         self.assertEqual(item['name'], "Purity")
 
         # get item by actual name
         item = self.db.get_item(name="Fuel Cell")
-        self.assertEqual(item['internal_name'], "equipmentmagazine")
+        self.assertEqual(item['internal_name'], "EquipmentMagazine")
 
         # get nonexistent item by internal name
         with self.assertRaises(RPDB_EntryNotFoundError):
@@ -50,7 +50,7 @@ class test_RunParserDB(unittest.TestCase):
 
         # get equipment by actual name
         item = self.db.get_equipment(name="Glowing Meteorite")
-        self.assertEqual(item['internal_name'], "meteor")
+        self.assertEqual(item['internal_name'], "Meteor")
 
         # get nonexistent equipment by internal name
         with self.assertRaises(RPDB_EntryNotFoundError):
@@ -73,7 +73,7 @@ class test_RunParserDB(unittest.TestCase):
 
         # get artifact by actual name
         item = self.db.get_artifact(name="Artifact of Sacrifice")
-        self.assertEqual(item['internal_name'], "sacrifice")
+        self.assertEqual(item['internal_name'], "Sacrifice")
 
         # get artifact equipment by internal name
         with self.assertRaises(RPDB_EntryNotFoundError):
@@ -96,7 +96,7 @@ class test_RunParserDB(unittest.TestCase):
 
         # get survivor by actual name
         item = self.db.get_survivor(name="MUL-T")
-        self.assertEqual(item['internal_name'], "mult")
+        self.assertEqual(item['internal_name'], "Toolbot")
 
         # get survivor equipment by internal name
         with self.assertRaises(RPDB_EntryNotFoundError):
