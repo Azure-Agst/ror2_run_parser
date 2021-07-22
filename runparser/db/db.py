@@ -16,14 +16,6 @@ import os
 import re
 
 
-class RPDB_EntryNotFoundError(Exception):
-    pass
-
-
-class RPDB_ArgumentError(Exception):
-    pass
-
-
 class RunParserDB():
     def __init__(self):
         self.path = os.path.join(os.path.dirname(__file__), "db.json")
@@ -40,17 +32,17 @@ class RunParserDB():
         if internal_name is not None:
             res = table.search(Item.internal_name.matches(internal_name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Item with internal_name '{internal_name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Item with internal_name '{internal_name}' does not exist in database.")
 
         # else, if name is passed in
         elif name is not None:
             res = table.search(Item.name.matches(name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Item with name '{name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Item with name '{name}' does not exist in database.")
 
         # else, throw error
         else:
-            raise RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
+            raise self.RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
 
         return res[0]
 
@@ -62,17 +54,17 @@ class RunParserDB():
         if internal_name is not None:
             res = table.search(Equipment.internal_name.matches(internal_name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Equipment with internal_name '{internal_name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Equipment with internal_name '{internal_name}' does not exist in database.")
 
         # else, if name is passed in
         elif name is not None:
             res = table.search(Equipment.name.matches(name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Equipment with name '{name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Equipment with name '{name}' does not exist in database.")
 
         # else, throw error
         else:
-            raise RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
+            raise self.RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
 
         return res[0]
 
@@ -84,17 +76,17 @@ class RunParserDB():
         if internal_name is not None:
             res = table.search(Artifact.internal_name.matches(internal_name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Artifact with internal_name '{internal_name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Artifact with internal_name '{internal_name}' does not exist in database.")
 
         # else, if name is passed in
         elif name is not None:
             res = table.search(Artifact.name.matches(name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Artifact with name '{name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Artifact with name '{name}' does not exist in database.")
 
         # else, throw error
         else:
-            raise RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
+            raise self.RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
 
         return res[0]
 
@@ -106,16 +98,22 @@ class RunParserDB():
         if internal_name is not None:
             res = table.search(Survivor.internal_name.matches(internal_name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Survivor with internal_name '{internal_name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Survivor with internal_name '{internal_name}' does not exist in database.")
 
         # else, if name is passed in
         elif name is not None:
             res = table.search(Survivor.name.matches(name, flags=re.IGNORECASE))
             if len(res) == 0:
-                raise RPDB_EntryNotFoundError(f"Survivor with name '{name}' does not exist in database.")
+                raise self.RPDB_EntryNotFoundError(f"Survivor with name '{name}' does not exist in database.")
 
         # else, throw error
         else:
-            raise RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
+            raise self.RPDB_ArgumentError("Either 'internal_name' or 'name' must be passed in.")
 
         return res[0]
+
+    class RPDB_EntryNotFoundError(Exception):
+        pass
+
+    class RPDB_ArgumentError(Exception):
+        pass
