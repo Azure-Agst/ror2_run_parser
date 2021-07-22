@@ -7,7 +7,7 @@ runparser.RunParser
 main class lol
 
 :copyright: (c) 2021 by Andrew Augustine.
-:license: Apache2, see LICENSE for more details.
+:license: GPL-3.0, see LICENSE for more details.
 """
 
 from bs4 import BeautifulSoup
