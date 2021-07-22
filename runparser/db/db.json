@@ -429,7 +429,7 @@
             "unlock": "\"Is This Bugged?\""
         },
         "100": {
-            "Boss": "Overloading Worm",
+            "boss": "Overloading Worm",
             "category": [
                 "Damage"
             ],
@@ -449,7 +449,7 @@
             ]
         },
         "101": {
-            "Boss": "Imp Overlord",
+            "boss": "Imp Overlord",
             "category": [
                 "Damage"
             ],
@@ -481,7 +481,7 @@
             ]
         },
         "102": {
-            "Boss": "Clay Dunestrider",
+            "boss": "Clay Dunestrider",
             "category": [
                 "Healing"
             ],
@@ -680,7 +680,7 @@
             "unlock": "Blockade Breaker"
         },
         "112": {
-            "Boss": "Solus Control Unit",
+            "boss": "Solus Control Unit",
             "category": [
                 "Utility"
             ],
@@ -700,7 +700,7 @@
             ]
         },
         "113": {
-            "Boss": "Grandparent",
+            "boss": "Grandparent",
             "category": [
                 "Healing"
             ],
@@ -1540,7 +1540,7 @@
             "unlock": "Newtist"
         },
         "46": {
-            "Boss": "Stone Titan",
+            "boss": "Stone Titan",
             "category": [
                 "Utility",
                 "Healing"
@@ -1567,7 +1567,7 @@
             ]
         },
         "47": {
-            "Boss": "Beetle Queen",
+            "boss": "Beetle Queen",
             "category": [
                 "Utility"
             ],
@@ -2165,7 +2165,7 @@
             ]
         },
         "75": {
-            "Boss": "Aurelionite",
+            "boss": "Aurelionite",
             "category": [
                 "Utility",
                 "WorldUnique"
@@ -2192,7 +2192,7 @@
             ]
         },
         "76": {
-            "Boss": "Grovetender",
+            "boss": "Grovetender",
             "category": [
                 "Damage",
                 "SprintRelated"
@@ -2401,7 +2401,7 @@
             ]
         },
         "85": {
-            "Boss": "Cleansing Pool",
+            "boss": "Cleansing Pool",
             "category": [
                 "Utility",
                 "WorldUnique"
@@ -2422,7 +2422,7 @@
             ]
         },
         "86": {
-            "Boss": "Cleansing Pool",
+            "boss": "Cleansing Pool",
             "category": [
                 "Damage",
                 "Healing",
@@ -2573,7 +2573,7 @@
             ]
         },
         "90": {
-            "Boss": "Wandering Vagrant",
+            "boss": "Wandering Vagrant",
             "category": [
                 "Damage"
             ],
@@ -2601,7 +2601,7 @@
             "rarity": 5
         },
         "92": {
-            "Boss": "Bulwark's Ambry",
+            "boss": "Bulwark's Ambry",
             "category": [
                 "WorldUnique"
             ],
@@ -2691,7 +2691,7 @@
             ]
         },
         "97": {
-            "Boss": "Grandparent",
+            "boss": "Grandparent",
             "category": [
                 "Utility",
                 "OnKillEffect"
@@ -2745,7 +2745,7 @@
             "unlock": "Never Back Down"
         },
         "99": {
-            "Boss": "Magma Worm",
+            "boss": "Magma Worm",
             "category": [
                 "Damage"
             ],
