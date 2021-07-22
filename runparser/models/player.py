@@ -16,6 +16,8 @@ from bs4 import Tag
 import logging
 import re
 
+from .item import Item
+
 logger = logging.getLogger(__name__)
 
 
@@ -34,7 +36,7 @@ class Player():
         self.killed: bool = False
         self.killedBy: str = None
         self.equipment: str = None
-        self.itemStacks: dict = {}
+        self.items: [Item] = []
 
         self.gamesPlayed: int = 0
         self.maxLevel: int = 0
@@ -98,8 +100,9 @@ class Player():
         self.stagesCompleted = int(statsheet.find('totalstagescompleted').text) if statsheet.find('totalstagescompleted') != None else 0
         self.timeAlive = float(statsheet.find('totaltimealive').text) if statsheet.find('totaltimealive') != None else 0.0
         self.equipment = rootTag.find('equipment').text if rootTag.find('equipment') != None else "N/A"
-        for item in rootTag.find('itemstacks').find_all():
-            self.itemStacks[item.name] = int(item.text)
+        
+        for item_tag in rootTag.find('itemstacks').find_all():
+            self.items.append(Item(item_tag.name, count=int(item_tag.text)))
 
         self.totalKills = int(statsheet.find('totalkills').text) if statsheet.find('totalgoldcollected') != None else 0
         self.minionKills = int(statsheet.find('totalminionkills').text) if statsheet.find('totalminionkills') != None else 0
