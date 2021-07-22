@@ -18,6 +18,7 @@ import re
 
 from .item import Item
 from .equipment import Equipment
+from .survivor import Survivor
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +34,7 @@ class Player():
 
     def reset(self):
         self.name: str = None
-        self.character: str = None
+        self.character: Survivor = None
         self.killed: bool = False
         self.killedBy: str = None
         self.equipment: Equipment = None
@@ -89,7 +90,7 @@ class Player():
         logger.debug("Parsing player...")
 
         self.name = rootTag.find('name').text
-        self.character = rootTag.find('bodyname').text.replace("Body", "")
+        self.character = Survivor(rootTag.find('bodyname').text.replace("Body", ""))
         self.killed = rootTag.find('isdead').text == '1'
         self.killedBy = rootTag.find('killerbodyname').text.replace("Body", "").replace("Invalid", "N/A")
 

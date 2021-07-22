@@ -28,6 +28,9 @@ class Equipment():
             item_data = db.get_equipment(internal_name=internal_name)
             self._parse(item_data)
 
+    def __eq__(self, other):
+        return self.internal_name == other.internal_name
+
     def _reset(self):
         """Resets the item object."""
         self.id: int = 0

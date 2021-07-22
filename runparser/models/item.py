@@ -27,9 +27,10 @@ class Item():
             db = RunParserDB()
             item_data = db.get_item(internal_name=internal_name)
             self._parse(item_data)
-        if count is None:
-            raise self.Item_ArgumentError("Item() must be instantiated with variable 'count' specified!")
         self.count = count
+
+    def __eq__(self, other):
+        return self.internal_name == other.internal_name
 
     def _reset(self):
         """Resets the item object."""
@@ -101,7 +102,4 @@ class Item():
             pass
 
     class Item_ParseFailure(Exception):
-        pass
-
-    class Item_ArgumentError(Exception):
         pass

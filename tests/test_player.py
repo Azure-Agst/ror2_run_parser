@@ -29,7 +29,8 @@ class test_Player(unittest.TestCase):
     def test_Player_GeneralData(self):
         """Tests general player data."""
         self.assertEqual(self.player.name, "Azure")
-        self.assertEqual(self.player.character, "Captain")
+        self.assertEqual(self.player.character.name, "Captain")
+        self.assertEqual(self.player.character.internal_name, "Captain")
         self.assertEqual(self.player.killed, False)
         self.assertEqual(self.player.killedBy, "N/A")
 

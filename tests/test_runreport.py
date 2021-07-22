@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from bs4 import BeautifulSoup, Tag
-from runparser import RunReport
+from runparser import RunReport, Item, Artifact, Equipment
 
 import unittest
 import os
@@ -40,15 +40,15 @@ class test_RunReport(unittest.TestCase):
     def test_RunReport_RuleData(self):
         """Tests run report's rule data."""
         self.assertEqual(self.report.difficulty, "Easy")
-        self.assertNotIn("Command", self.report.artifacts)
-        self.assertIn("Tooth", self.report.enabled_items)
-        self.assertNotIn("Clover", self.report.enabled_items)
-        self.assertIn("Clover", self.report.disabled_items)
-        self.assertNotIn("Tooth", self.report.disabled_items)
-        self.assertIn("Fruit", self.report.enabled_equipment)
-        self.assertNotIn("Meteor", self.report.enabled_equipment)
-        self.assertIn("Meteor", self.report.disabled_equipment)
-        self.assertNotIn("Fruit", self.report.disabled_equipment)
+        self.assertNotIn(Artifact("Command"), self.report.artifacts)
+        self.assertIn(Item("Tooth"), self.report.enabled_items)
+        self.assertNotIn(Item("Clover"), self.report.enabled_items)
+        self.assertIn(Item("Clover"), self.report.disabled_items)
+        self.assertNotIn(Item("Tooth"), self.report.disabled_items)
+        self.assertIn(Equipment("Fruit"), self.report.enabled_equipment)
+        self.assertNotIn(Equipment("Meteor"), self.report.enabled_equipment)
+        self.assertIn(Equipment("Meteor"), self.report.disabled_equipment)
+        self.assertNotIn(Equipment("Fruit"), self.report.disabled_equipment)
         self.assertEqual(self.report.misc['StartingMoney'], "15")
         self.assertEqual(self.report.misc['StageOrder'], "Normal")
         self.assertEqual(self.report.misc['KeepMoneyBetweenStages'], "Off")
