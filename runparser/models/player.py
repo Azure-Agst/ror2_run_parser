@@ -17,6 +17,7 @@ import logging
 import re
 
 from .item import Item
+from .equipment import Equipment
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +36,7 @@ class Player():
         self.character: str = None
         self.killed: bool = False
         self.killedBy: str = None
-        self.equipment: str = None
+        self.equipment: Equipment = None
         self.items: [Item] = []
 
         self.gamesPlayed: int = 0
@@ -99,7 +100,9 @@ class Player():
         self.distanceTravelled = float(statsheet.find('totaldistancetraveled').text) if statsheet.find('totaldistancetraveled') != None else 0.0
         self.stagesCompleted = int(statsheet.find('totalstagescompleted').text) if statsheet.find('totalstagescompleted') != None else 0
         self.timeAlive = float(statsheet.find('totaltimealive').text) if statsheet.find('totaltimealive') != None else 0.0
-        self.equipment = rootTag.find('equipment').text if rootTag.find('equipment') != None else "N/A"
+        
+        if rootTag.find('equipment') is not None:
+            self.equipment = Equipment(rootTag.find('equipment').text)
         
         for item_tag in rootTag.find('itemstacks').find_all():
             self.items.append(Item(item_tag.name, count=int(item_tag.text)))

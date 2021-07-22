@@ -40,7 +40,7 @@ class test_Player(unittest.TestCase):
         self.assertAlmostEqual(self.player.distanceTravelled, 35257.767, places=3)
         self.assertEqual(self.player.stagesCompleted, 8)
         self.assertAlmostEqual(self.player.timeAlive, 2214.100, places=3)
-        self.assertEqual(self.player.equipment, "Lightning")
+        self.assertEqual(self.player.equipment.name, "Royal Capacitor")
         self.assertEqual(self.player.items[4].count, 3)
         self.assertEqual(self.player.items[4].name, "Ghor's Tome")
         self.assertEqual(self.player.itemAcquisitionOrder[7], "Medkit")
