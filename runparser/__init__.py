@@ -8,7 +8,7 @@ import logging
 # set up logging
 filename = 'runparser.log'
 encoding = 'utf-8'
-output_fmt = '%(asctime)s: %(levelname)s: %(message)s'
+output_fmt = '%(asctime)s - %(levelname)s - %(name)s - %(message)s'
 if os.getenv('CI') == 'true':
     level = logging.WARNING
 else:
@@ -28,7 +28,7 @@ from .runparser import RunParser
 from .autorunparser import AutoRunParser
 
 # db classes
-from .db import RunParserDB
+from .db import RunParserDB, RunParserDBConn
 
 # models
 from .models.runreport import RunReport

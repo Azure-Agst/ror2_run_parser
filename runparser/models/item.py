@@ -13,7 +13,7 @@ This module implements the class that represents each Item.
 import logging
 
 from ..utils.enums import ItemRarityEnum
-from ..db import RunParserDB
+from ..db import RunParserDBConn
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +24,7 @@ class Item():
     def __init__(self, internal_name: str = None, count: int = None):
         self._reset()
         if internal_name is not None:
-            db = RunParserDB()
+            db = RunParserDBConn()
             item_data = db.get_item(internal_name=internal_name)
             self._parse(item_data)
         self.count = count

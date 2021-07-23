@@ -13,7 +13,7 @@ This module implements the class that represents each Equipment.
 import logging
 
 from ..utils.enums import EquipmentRarityEnum
-from ..db import RunParserDB
+from ..db import RunParserDBConn
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +24,7 @@ class Equipment():
     def __init__(self, internal_name: str = None):
         self._reset()
         if internal_name is not None:
-            db = RunParserDB()
+            db = RunParserDBConn()
             item_data = db.get_equipment(internal_name=internal_name)
             self._parse(item_data)
 
