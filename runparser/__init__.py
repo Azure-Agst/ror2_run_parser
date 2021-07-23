@@ -1,6 +1,14 @@
 # -*- coding: utf-8 -*-
 # flake8: noqa: E401
 
+__title__ = 'RoR2RunParser'
+__author__ = 'Andrew Augustine'
+__author_email__ = 'me@azureagst.dev'
+__license__ = 'GPL-3.0 License'
+__version__ = '0.1.0'
+
+__path__ = __import__('pkgutil').extend_path(__path__, __name__)
+
 import os
 import sys
 import logging
@@ -20,21 +28,12 @@ if sys.version_info > (3, 9):
 else:
     logging.basicConfig(filename=filename, format=output_fmt, level=level)
 
-from .__version__ import __title__, __description__, __url__, __version__, \
-    __build__, __author__, __author_email__, __license__, __copyright__
+
+# subpackages
+from .db import *
+from .models import *
+from .utils import *
 
 # main classes
-from .runparser import RunParser
-from .autorunparser import AutoRunParser
-
-# db classes
-from .db import RunParserDB, RunParserDBConn
-
-# models
-from .models.runreport import RunReport
-from .models.player import Player
-from .models.profile import Profile
-from .models.item import Item
-from .models.equipment import Equipment
-from .models.artifact import Artifact
-from .models.survivor import Survivor
+from .runparser import *
+from .autorunparser import *
