@@ -12,7 +12,7 @@ This module implements the class that represents each Artifact.
 
 import logging
 
-from ..db import RunParserDB
+from ..db import RunParserDBConn
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ class Artifact():
     def __init__(self, internal_name: str = None):
         self._reset()
         if internal_name is not None:
-            db = RunParserDB()
+            db = RunParserDBConn()
             artifact_data = db.get_artifact(internal_name=internal_name)
             self._parse(artifact_data)
 
